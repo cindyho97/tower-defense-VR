@@ -56,5 +56,10 @@ public class Enemy : MonoBehaviour {
         // Enemy arrives at castle
     }
 
+    public void TakeDamage(int damage)
+    {
+        // Enemy hit by bullet
+    }
+
 
 }

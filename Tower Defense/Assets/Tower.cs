@@ -62,10 +62,11 @@ public class Tower : MonoBehaviour {
     }
     
     private void ShootAt(Enemy nearestEnemy)
-    {/*
+    {
+        // TODO: fire bullet from tip
         GameObject bullet = Instantiate(bulletPrefab, weaponTransform.position, weaponTransform.rotation) as GameObject;
 
-        Bullet bulletScript = GetComponent<Bullet>();
-        bulletScript.target = nearestEnemy.transform;*/
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        bulletScript.target = nearestEnemy.transform;
     }
 }
