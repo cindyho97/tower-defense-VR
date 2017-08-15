@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour {
     private Transform weaponTransform;
 
-    private float fireCooldown = 0.5f;
+    private float fireCooldown = 1f;
     private float fireCooldownLeft = 0f;
 
     public float range = 10f;

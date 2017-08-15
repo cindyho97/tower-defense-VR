@@ -23,8 +23,8 @@ public class Enemy : MonoBehaviour {
     {
         targetPathNode = path.transform.GetChild(pathNodeIndex);
         pathNodeIndex++;
-
-        if(targetPathNode == null)
+        // TODO: optimize last node
+        if(targetPathNode.name == "PathNode (5)")
         {
             ReachedGoal();
         }
@@ -54,6 +54,9 @@ public class Enemy : MonoBehaviour {
     private void ReachedGoal()
     {
         // Enemy arrives at castle
+        Debug.Log("Reached Goal!");
+        Managers.Player.UpdateHealth(-20);
+        Destroy(gameObject);
     }
 
     public void TakeDamage(int damage)
