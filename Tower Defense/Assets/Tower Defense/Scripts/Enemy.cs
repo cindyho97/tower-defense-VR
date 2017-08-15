@@ -23,8 +23,8 @@ public class Enemy : MonoBehaviour {
     {
         targetPathNode = path.transform.GetChild(pathNodeIndex);
         pathNodeIndex++;
-        // TODO: optimize last node
-        if(targetPathNode.name == "PathNode (5)")
+
+        if(targetPathNode.name ==  path.transform.GetChild(0).name + " (" + (path.transform.childCount-1) + ")")
         {
             ReachedGoal();
         }
