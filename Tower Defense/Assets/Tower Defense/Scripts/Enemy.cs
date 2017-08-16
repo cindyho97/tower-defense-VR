@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
 
     public GameObject path;
     public float speed = 2f;
-    public int health = 10;
+    public int health = 50;
     public int coinValue = 1;
 	
 	// Update is called once per frame
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour {
     {
         // Enemy hit by bullet
         health -= damage;
-        Debug.Log("enemyhealth:" + health);
+
         if(health <= 0)
         {
             StartCoroutine(Die());

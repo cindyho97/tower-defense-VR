@@ -6,20 +6,26 @@ public class Bullet : MonoBehaviour {
 
     public Transform target;
     public float speed = 10f;
-    public int damage = 5;
+    public int damage = 1;
 
     private void Update()
     {
-        ShootBullet();
+        if(target != null)
+        {
+            ShootBullet();
+        }
+        
     }
 
     private void ShootBullet()
     {
+        CheckTargetExists();
+
         Vector3 dir = target.position - transform.localPosition;
         Debug.Log(target);
         float distThisFrame = speed * Time.deltaTime; // Distance per frame
 
-        if(dir.magnitude < distThisFrame)
+        if(dir.magnitude <= distThisFrame)
         {
             // Bullet reached target
             BulletHit();
@@ -39,5 +45,15 @@ public class Bullet : MonoBehaviour {
         // TODO: bullet explosion area of effect
         target.GetComponent<Enemy>().TakeDamage(damage);
         Destroy(gameObject);
+    }
+
+    private void CheckTargetExists()
+    {
+        if(target == null)
+        {
+            // Target out of reach!
+            Destroy(gameObject);
+            return;
+        }
     }
 }
