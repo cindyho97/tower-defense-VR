@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour {
 
     public GameObject path;
     public float speed = 2f;
+    public int health = 10;
+    public int coinValue = 1;
 	
 	// Update is called once per frame
 	void Update () {
@@ -62,6 +64,20 @@ public class Enemy : MonoBehaviour {
     public void TakeDamage(int damage)
     {
         // Enemy hit by bullet
+        health -= damage;
+        Debug.Log("enemyhealth:" + health);
+        if(health <= 0)
+        {
+            StartCoroutine(Die());
+        }
+    }
+
+    private IEnumerator Die()
+    {
+        Managers.Player.UpdateCoins(coinValue);
+        // Start death animation
+        yield return new WaitForSeconds(0);
+        Destroy(gameObject);
     }
 
 

@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
     {
         Debug.Log("Player manager starting...");
         // TODO: update saved data from player
-        UpdateData(80, 100);
+        UpdateData(100, 100);
         status = ManagerStatus.Started;
     }
 
@@ -51,5 +51,10 @@ public class PlayerManager : MonoBehaviour,IGameManager {
         }
 
         Messenger.Broadcast(GameEvent.COINS_UPDATED);
+    }
+
+    public void Respawn()
+    {
+        UpdateData(100, 100);
     }
 }

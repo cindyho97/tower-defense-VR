@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public Transform target;
     public float speed = 10f;
-    public int damage = 1;
+    public int damage = 5;
 
     private void Update()
     {
@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour {
         }
         else
         {
-            // TODO: bullet in right direction
+            // FIXME: bullet in right direction
             // Move towards target
             transform.Translate(dir.normalized * distThisFrame, Space.World);
             Quaternion targetRotation = Quaternion.LookRotation(dir); // Look in direction that enemy is moving
