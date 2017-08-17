@@ -21,19 +21,31 @@ public class Enemy : MonoBehaviour {
         {
             GetNextPathNode();
         }
-
-        MoveTowardsNode();
+        if(targetPathNode != null)
+        {
+            MoveTowardsNode();
+        }
+        
 	}
 
     private void GetNextPathNode()
     {
-        targetPathNode = path.transform.GetChild(pathNodeIndex);
-        pathNodeIndex++;
-
-        if(targetPathNode.name ==  path.transform.GetChild(0).name + " (" + (path.transform.childCount-1) + ")")
+        if (pathNodeIndex < path.transform.childCount)
         {
+            targetPathNode = path.transform.GetChild(pathNodeIndex);
+            pathNodeIndex++;
+        }
+        else
+        {
+            targetPathNode = null;
             ReachedGoal();
         }
+        
+        /*
+        if(targetPathNode.name ==  path.transform.GetChild(0).name + " (" + (path.transform.childCount-1) + ")")
+        {
+            
+        }*/
     }
 
     private void MoveTowardsNode()
