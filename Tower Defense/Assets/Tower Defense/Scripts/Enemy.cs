@@ -10,9 +10,13 @@ public class Enemy : MonoBehaviour {
     public float speed = 2f;
     public int health = 3;
     public int coinValue = 10;
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        path = GameObject.Find("Path");
+    }
+    // Update is called once per frame
+    void Update () {
         if(targetPathNode == null)
         {
             GetNextPathNode();

@@ -61,6 +61,8 @@ public class Bullet : MonoBehaviour {
                 }
             }
         }
+
+        // TODO: spawn explosion object 
         Destroy(gameObject);
 
     }
