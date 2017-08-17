@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   speed: 2
-  health: 50
+  health: 3
   coinValue: 1
 --- !u!136 &136623901886916498
 CapsuleCollider:

@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour {
     public Transform target;
     public float speed = 10f;
     public int damage = 1;
+    // Canon tower
+    public float radius = 0;
 
     private void Update()
     {
@@ -42,9 +44,25 @@ public class Bullet : MonoBehaviour {
 
     private void BulletHit()
     {
-        // TODO: bullet explosion area of effect
-        target.GetComponent<Enemy>().TakeDamage(damage);
+        if(radius == 0)
+        {
+            target.GetComponent<Enemy>().TakeDamage(damage);    
+        }
+        else // Bullet with area explosion effect
+        {
+            Collider[] cols = Physics.OverlapSphere(transform.position, radius); // Return array of colliders that bullet collides with
+
+            foreach(Collider collider in cols)
+            {
+                Enemy enemy = collider.GetComponent<Enemy>();
+                if(enemy != null)
+                {
+                    enemy.GetComponent<Enemy>().TakeDamage(damage);
+                }
+            }
+        }
         Destroy(gameObject);
+
     }
 
     private void CheckTargetExists()

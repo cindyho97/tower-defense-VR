@@ -8,8 +8,13 @@ public class Tower : MonoBehaviour {
     private float fireCooldown = 1f;
     private float fireCooldownLeft = 0f;
 
-    public float range = 10f;
+    public float range = 20f;
     public GameObject bulletPrefab;
+
+    public int cost = 1;
+
+    public int damage = 1;
+    public float radius = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -68,5 +73,8 @@ public class Tower : MonoBehaviour {
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.target = nearestEnemy.transform;
+        bulletScript.damage = damage;
+        // Canon tower
+        bulletScript.radius = radius;
     }
 }

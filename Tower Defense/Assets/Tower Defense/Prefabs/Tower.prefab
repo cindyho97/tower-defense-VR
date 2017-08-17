@@ -303,3 +303,4 @@ MonoBehaviour:
   range: 10
   bulletPrefab: {fileID: 1673114381794736, guid: fe06c9da65da2c14ba42f7445345ae74,
     type: 2}
+  cost: 1

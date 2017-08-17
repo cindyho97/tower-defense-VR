@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour {
 
     public GameObject path;
     public float speed = 2f;
-    public int health = 50;
-    public int coinValue = 1;
+    public int health = 3;
+    public int coinValue = 10;
 	
 	// Update is called once per frame
 	void Update () {

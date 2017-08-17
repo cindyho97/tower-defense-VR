@@ -10,6 +10,14 @@ public class TowerSpot : MonoBehaviour {
         BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
         if( bm.selectedTower != null)
         {
+            if(Managers.Player.coins < bm.selectedTower.GetComponent<Tower>().cost)
+            {
+                Debug.Log("Not enough money");
+                return;
+            }
+
+            Managers.Player.UpdateCoins(-bm.selectedTower.GetComponent<Tower>().cost);
+
             // FIXME: we assume that we are an object nested in a parent
             Instantiate(bm.selectedTower, transform.parent.position, transform.parent.rotation);
             Destroy(transform.parent.gameObject);
