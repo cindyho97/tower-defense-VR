@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public Transform target;
     public float speed = 10f;
-    public int damage = 1;
+    public int damage;
     // Canon tower
     public float radius = 0;
 

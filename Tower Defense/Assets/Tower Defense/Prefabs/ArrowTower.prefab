@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4726383267390574}
-  - component: {fileID: 114179619850502264}
+  - component: {fileID: 114921513986752296}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: ArrowTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 844825f00e170ef42bbb8303454e7c2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,7 +181,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 844825f00e170ef42bbb8303454e7c2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -213,7 +213,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 844825f00e170ef42bbb8303454e7c2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -289,7 +289,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114179619850502264
+--- !u!114 &114921513986752296
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -297,10 +297,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142739796665854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85eef51022b981841ad41cb8ed15555f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0640273a0d316d14080633076aa58c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
   bulletPrefab: {fileID: 1673114381794736, guid: fe06c9da65da2c14ba42f7445345ae74,
     type: 2}
+  range: 20
   cost: 1
+  damage: 1
+  explosionRadius: 0

@@ -8,13 +8,14 @@ public class Tower : MonoBehaviour {
     private float fireCooldown = 1f;
     private float fireCooldownLeft = 0f;
 
-    public float range = 20f;
     public GameObject bulletPrefab;
 
-    public int cost = 1;
+    public float range;
+    public int cost;
+    public int damage;
 
-    public int damage = 1;
-    public float radius = 0;
+    // Canon tower
+    public float explosionRadius = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -61,6 +62,7 @@ public class Tower : MonoBehaviour {
         fireCooldownLeft -= Time.deltaTime;
         if (fireCooldownLeft <= 0 && dir.magnitude <= range)
         {
+            Debug.Log("range: " + range);
             ShootAt(nearestEnemy);
             fireCooldownLeft = fireCooldown;
         }
@@ -74,7 +76,9 @@ public class Tower : MonoBehaviour {
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.target = nearestEnemy.transform;
         bulletScript.damage = damage;
+        Debug.Log("damage: " + damage);
         // Canon tower
-        bulletScript.radius = radius;
+        Debug.Log("explosion radius: " + explosionRadius);
+        bulletScript.radius = explosionRadius;
     }
 }

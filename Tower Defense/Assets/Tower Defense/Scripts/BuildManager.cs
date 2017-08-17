@@ -6,6 +6,10 @@ public class BuildManager : MonoBehaviour {
 
     public GameObject selectedTower;
 
+    public GameObject arrowTower;
+    public GameObject magicTower;
+    public GameObject canonTower;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,5 +19,10 @@ public class BuildManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void OnTowerTypeSelect(GameObject towerPrefab)
+    {
+        selectedTower = towerPrefab;
+    }
 
 }
