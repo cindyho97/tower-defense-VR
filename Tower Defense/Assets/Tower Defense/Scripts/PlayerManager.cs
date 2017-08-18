@@ -14,14 +14,15 @@ public class PlayerManager : MonoBehaviour,IGameManager {
     {
         Debug.Log("Player manager starting...");
         // TODO: update saved data from player
-        UpdateData(100, 100);
+        UpdateData(100, 100, 50);
         status = ManagerStatus.Started;
     }
 
-    public void UpdateData(int health, int maxHealth)
+    public void UpdateData(int health, int maxHealth, int coins)
     {
         this.health = health;
         this.maxHealth = maxHealth;
+        this.coins = coins;
     }
 
     public void UpdateHealth(int damage)
@@ -55,6 +56,6 @@ public class PlayerManager : MonoBehaviour,IGameManager {
 
     public void Respawn()
     {
-        UpdateData(100, 100);
+        UpdateData(100, 100, 50);
     }
 }

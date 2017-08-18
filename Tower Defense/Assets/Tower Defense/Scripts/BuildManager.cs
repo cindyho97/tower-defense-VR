@@ -4,25 +4,38 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
 
-    public GameObject selectedTower;
+    private GameObject selectedTower;
 
-    public GameObject arrowTower;
-    public GameObject magicTower;
-    public GameObject canonTower;
+    public GameObject arrowTowerPrefab;
+    public GameObject magicTowerPrefab;
+    public GameObject canonTowerPrefab;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private int towerCost;
 
     public void OnTowerTypeSelect(GameObject towerPrefab)
     {
         selectedTower = towerPrefab;
+        towerCost = selectedTower.GetComponent<Tower>().cost;
+
+        BuildTower();
     }
+
+    public void BuildTower()
+    {
+        if(selectedTower != null)
+        {
+            if(Managers.Player.coins < towerCost)
+            {
+                Debug.Log("Not enough money!");
+                return;
+            }
+
+            Managers.Player.UpdateCoins(-towerCost);
+
+            Instantiate(selectedTower, transform.parent.position, transform.parent.rotation);
+            Destroy(transform.parent.gameObject);
+        }
+    }
+
 
 }

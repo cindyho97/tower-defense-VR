@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class TowerSpot : MonoBehaviour {
 
-    public void OnTowerSelect()
+    public Canvas buildCanvas;
+
+    public void OnTowerSpotSelect()
     {
         Debug.Log("Tower spot clicked");
+
+        buildCanvas.gameObject.SetActive(true);
+    }
+
+    /*
+    public void BuildTower()
+    {
         BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
-        if( bm.selectedTower != null)
+        if (bm.selectedTower != null)
         {
-            if(Managers.Player.coins < bm.selectedTower.GetComponent<Tower>().cost)
+            if (Managers.Player.coins < bm.selectedTower.GetComponent<Tower>().cost)
             {
                 Debug.Log("Not enough money");
                 return;
@@ -23,5 +32,5 @@ public class TowerSpot : MonoBehaviour {
             Destroy(transform.parent.gameObject);
         }
     }
-
+    */
 }
