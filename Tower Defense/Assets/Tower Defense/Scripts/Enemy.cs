@@ -7,14 +7,15 @@ public class Enemy : MonoBehaviour {
     private Transform targetPathNode;
 
     public GameObject path;
-    public float speed = 2f;
-    public int health = 3;
-    public int coinValue = 10;
+    public float speed;
+    public int health;
+    public int coinValue;
 
     private void Start()
     {
         path = GameObject.Find("Path");
     }
+
     // Update is called once per frame
     void Update () {
         if(targetPathNode == null)
@@ -41,11 +42,6 @@ public class Enemy : MonoBehaviour {
             ReachedGoal();
         }
         
-        /*
-        if(targetPathNode.name ==  path.transform.GetChild(0).name + " (" + (path.transform.childCount-1) + ")")
-        {
-            
-        }*/
     }
 
     private void MoveTowardsNode()
@@ -81,7 +77,7 @@ public class Enemy : MonoBehaviour {
     {
         // Enemy hit by bullet
         health -= damage;
-
+        
         if(health <= 0)
         {
             StartCoroutine(Die());
@@ -89,7 +85,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private IEnumerator Die()
-    {
+    { 
         Managers.Player.UpdateCoins(coinValue);
         // Start death animation
         yield return new WaitForSeconds(0);

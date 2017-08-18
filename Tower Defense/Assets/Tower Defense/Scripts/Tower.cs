@@ -62,7 +62,6 @@ public class Tower : MonoBehaviour {
         fireCooldownLeft -= Time.deltaTime;
         if (fireCooldownLeft <= 0 && dir.magnitude <= range)
         {
-            Debug.Log("range: " + range);
             ShootAt(nearestEnemy);
             fireCooldownLeft = fireCooldown;
         }
@@ -76,9 +75,8 @@ public class Tower : MonoBehaviour {
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.target = nearestEnemy.transform;
         bulletScript.damage = damage;
-        Debug.Log("damage: " + damage);
+
         // Canon tower
-        Debug.Log("explosion radius: " + explosionRadius);
         bulletScript.radius = explosionRadius;
     }
 }
