@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
 
     float spawnEnemyCD = 0.5f;
-    float spawnEnemyCDRemaining = 5;
+    public float spawnEnemyCDRemaining = 10;
 
     [System.Serializable]
     public class WaveComponent
@@ -17,10 +17,6 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     public WaveComponent[] waveComps;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {

@@ -21,8 +21,6 @@ public class Bullet : MonoBehaviour {
 
     private void ShootBullet()
     {
-        CheckTargetExists();
-
         Vector3 dir = target.position - transform.localPosition;
         Debug.Log(target);
         float distThisFrame = speed * Time.deltaTime; // Distance per frame
