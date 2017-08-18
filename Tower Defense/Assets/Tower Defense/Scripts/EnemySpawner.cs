@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
-    float spawnEnemyCD = 0.25f;
+    float spawnEnemyCD = 0.5f;
     float spawnEnemyCDRemaining = 5;
 
     [System.Serializable]
@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour {
                 }
                 else
                 {
-
+                    // No more enemy waves
                 }
                 
                 Destroy(gameObject);

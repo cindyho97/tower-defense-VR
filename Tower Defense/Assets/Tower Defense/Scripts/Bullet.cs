@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour {
         {
             ShootBullet();
         }
-        
+        CheckTargetExists();
     }
 
     private void ShootBullet()
