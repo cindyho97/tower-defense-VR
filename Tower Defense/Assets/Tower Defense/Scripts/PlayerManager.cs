@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
     public void Startup()
     {
         // TODO: update saved data from player
-        UpdateData(100, 100, 1);
+        UpdateData(100, 100, 4);
 
         status = ManagerStatus.Started;
     }

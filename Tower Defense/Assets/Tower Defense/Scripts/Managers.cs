@@ -28,7 +28,7 @@ public class Managers : MonoBehaviour {
 
         yield return null;
  
-        Debug.Log("All managers started up!");
+        //Debug.Log("All managers started up!");
 
     }
 }

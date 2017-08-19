@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 119316694}
   - component: {fileID: 119316696}
   - component: {fileID: 119316695}
-  - component: {fileID: 119316697}
   m_Layer: 0
   m_Name: Game Managers
   m_TagString: Untagged
@@ -308,20 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1744301b18822f04db0ef1eecfc02660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &119316697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 119316693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6c4f4b460a7804cb67833062b3931c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerPrefabs: []
-  towerImages: []
-  enabledSprites: []
 --- !u!1 &141088099
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +968,7 @@ Transform:
   - {fileID: 1682514544}
   - {fileID: 1244259360}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &500302011
 Prefab:
@@ -1022,7 +1007,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4463259881342078, guid: 1e07fe25658710a4488ff9c0e74d9756, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1314772675766072, guid: 1e07fe25658710a4488ff9c0e74d9756, type: 2}
       propertyPath: m_IsActive
@@ -1107,6 +1092,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 516988243}
+  - component: {fileID: 516988244}
   m_Layer: 0
   m_Name: TowerSpot
   m_TagString: Untagged
@@ -1127,8 +1113,20 @@ Transform:
   - {fileID: 1394070998}
   - {fileID: 608863090}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &516988244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516988242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10cf2db9d133324f8fc948464ba648c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildCanvas: {fileID: 608863085}
 --- !u!1 &519885156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726383267390574, guid: 3556d624fe18e184d8da991d5f5d4054, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1142739796665854, guid: 3556d624fe18e184d8da991d5f5d4054, type: 2}
       propertyPath: m_IsActive
@@ -1542,18 +1540,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6c4f4b460a7804cb67833062b3931c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 1142739796665854, guid: 3556d624fe18e184d8da991d5f5d4054, type: 2}
-  - {fileID: 1280413492144580, guid: 3abe916c2d4e74a469fdc89b91ff3ef3, type: 2}
-  - {fileID: 1314772675766072, guid: 1e07fe25658710a4488ff9c0e74d9756, type: 2}
-  towerImages:
-  - {fileID: 1342717095}
-  - {fileID: 1720982618}
-  - {fileID: 46269239}
-  enabledSprites:
-  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  arrowPrefab: {fileID: 1142739796665854, guid: 3556d624fe18e184d8da991d5f5d4054,
+    type: 2}
+  magicPrefab: {fileID: 1280413492144580, guid: 3abe916c2d4e74a469fdc89b91ff3ef3,
+    type: 2}
+  canonPrefab: {fileID: 1314772675766072, guid: 1e07fe25658710a4488ff9c0e74d9756,
+    type: 2}
+  arrowImage: {fileID: 1342717095}
+  magicImage: {fileID: 1720982618}
+  canonImage: {fileID: 46269239}
+  towerBuild: 0
 --- !u!114 &608863087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2024,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4575758461000402, guid: 3abe916c2d4e74a469fdc89b91ff3ef3, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1280413492144580, guid: 3abe916c2d4e74a469fdc89b91ff3ef3, type: 2}
       propertyPath: m_IsActive
@@ -2728,7 +2724,7 @@ RectTransform:
   m_Children:
   - {fileID: 1530618009}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3043,7 +3039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3191,7 +3187,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362309538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.25}
+  m_LocalPosition: {x: 0, y: 0, z: -2.8}
   m_LocalScale: {x: 0.003, y: 0.003, z: 0.0023}
   m_Children:
   - {fileID: 1401643661}
@@ -3200,7 +3196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.06, y: 0.5}
+  m_AnchoredPosition: {x: -6.38, y: 0.5}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362309543
@@ -3228,7 +3224,6 @@ GameObject:
   - component: {fileID: 1394071002}
   - component: {fileID: 1394071001}
   - component: {fileID: 1394071000}
-  - component: {fileID: 1394070999}
   - component: {fileID: 1394071003}
   - component: {fileID: 1394071004}
   m_Layer: 0
@@ -3251,18 +3246,6 @@ Transform:
   m_Father: {fileID: 516988243}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1394070999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1394070997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10cf2db9d133324f8fc948464ba648c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCanvas: {fileID: 608863089}
 --- !u!23 &1394071000
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3342,7 +3325,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1394070999}
+        - m_Target: {fileID: 516988244}
           m_MethodName: OnTowerSpotSelect
           m_Mode: 1
           m_Arguments:
@@ -3367,9 +3350,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6c4f4b460a7804cb67833062b3931c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabs: []
-  towerImages: []
-  enabledSprites: []
+  arrowPrefab: {fileID: 0}
+  magicPrefab: {fileID: 0}
+  canonPrefab: {fileID: 0}
+  arrowImage: {fileID: 0}
+  magicImage: {fileID: 0}
+  canonImage: {fileID: 0}
+  towerBuild: 0
 --- !u!1 &1401643660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,11 +3749,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fedd7a08301dc94b8aaf7a8002f3bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnEnemyCDRemaining: 10
+  spawnEnemyCDRemaining: 5
   waveComps:
   - enemyPrefab: {fileID: 1971016249360996, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 5
+  - enemyPrefab: {fileID: 1660281569232170, guid: 2e62eeca8a433e6479514c1947c4f037,
+      type: 2}
+    nrOfEnemies: 4
 --- !u!1 &1562652035
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,7 +4043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4312,7 +4302,7 @@ Transform:
   - {fileID: 834529967}
   - {fileID: 335436968}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1945813615
 GameObject:

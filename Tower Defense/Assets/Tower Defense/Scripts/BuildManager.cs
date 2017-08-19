@@ -7,50 +7,107 @@ public class BuildManager : MonoBehaviour {
 
     private GameObject selectedTower;
 
-    public GameObject[] towerPrefabs;
+    public GameObject arrowPrefab;
+    public GameObject magicPrefab;
+    public GameObject canonPrefab;
 
-    public Image[] towerImages;
+    public Image arrowImage;
+    public Image magicImage;
+    public Image canonImage;
+
     private int towerCost;
+    
+    public bool towerBuild = false;
 
-    public Sprite[] enabledSprites;
-
+    private GameObject previousTower;
+    private Color red = new Color(255, 0, 0, 200);
+    private Color white = new Color(255, 255, 255);
+    private Image currentImage;
 
     private void Start()
     {
-        // Activate tower image if enough money
-        int imageIndex = 0;
-        foreach(GameObject towerPrefab in towerPrefabs)
+        ChangeEnableColor();     
+    }
+
+    // Give tower already build a disable color
+    public void ChangeTowerBuildColor()
+    {
+        if(previousTower == arrowPrefab)
         {
-            if(Managers.Player.coins >= towerPrefab.GetComponent<Tower>().cost)
-            {
-                towerImages[imageIndex].sprite = enabledSprites[imageIndex];
-                imageIndex++;
-            }
+            currentImage = arrowImage;
+        }
+        else if(previousTower == magicPrefab)
+        {
+            currentImage = magicImage;
+        }
+        else if(previousTower == canonPrefab)
+        {
+            currentImage = canonImage;
+        }
+        currentImage.color = red;
+    }
+
+
+    public void ChangeEnableColor()
+    {
+        if(Managers.Player.coins >= arrowPrefab.GetComponent<Tower>().cost)
+        {
+            arrowImage.color = white;
+        }
+        
+        if(Managers.Player.coins >= magicPrefab.GetComponent<Tower>().cost)
+        {
+            magicImage.color = white; ;
+        }
+
+        if(Managers.Player.coins >= canonPrefab.GetComponent<Tower>().cost)
+        {
+            canonImage.color = white;
         }
     }
 
     public void OnTowerTypeSelect(GameObject towerPrefab)
     {
         selectedTower = towerPrefab;
-        towerCost = selectedTower.GetComponent<Tower>().cost;
-
+        if(previousTower != null)
+        {
+            towerBuild = true;
+        }
         BuildTower();
     }
 
     public void BuildTower()
     {
+        // FIXME: coins added after buying towers
         if(selectedTower != null)
         {
-            if(Managers.Player.coins < towerCost)
+            if (Managers.Player.coins < selectedTower.GetComponent<Tower>().cost || previousTower == selectedTower)
             {
-                Debug.Log("Not enough money!");
+                Debug.Log("Not enough money or same tower");
                 return;
             }
 
-            Managers.Player.UpdateCoins(-towerCost);
+            towerCost = selectedTower.GetComponent<Tower>().cost;
 
-            Instantiate(selectedTower, transform.parent.position, transform.parent.rotation);
-            Destroy(transform.parent.gameObject);
+            previousTower = selectedTower;
+
+            Managers.Player.UpdateCoins(-towerCost);
+            if (towerBuild)
+            {
+                currentImage.color = white;
+                GameObject currentTower = transform.parent.gameObject.GetComponentInChildren<Tower>().gameObject;
+                Destroy(currentTower);
+            }
+            else
+            {
+                GameObject platform = GameObject.Find("Platform");
+                Destroy(platform);
+                towerBuild = true;
+            }
+
+            Instantiate(selectedTower, transform.parent.position, transform.parent.rotation,transform.parent);
+            
+            gameObject.SetActive(false);
         }
     }
 

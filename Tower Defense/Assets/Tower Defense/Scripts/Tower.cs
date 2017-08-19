@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Tower : MonoBehaviour {
+public class Tower : MonoBehaviour, IPointerClickHandler {
     private Transform weaponTransform;
 
     private float fireCooldown = 1f;
@@ -13,6 +14,8 @@ public class Tower : MonoBehaviour {
     public float range;
     public int cost;
     public int damage;
+
+    private GameObject buildCanvas;
 
     // Canon tower
     public float explosionRadius = 0;
@@ -78,5 +81,15 @@ public class Tower : MonoBehaviour {
 
         // Canon tower
         bulletScript.radius = explosionRadius;
+    }
+
+    // Click on tower
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        buildCanvas = transform.parent.GetComponent<TowerSpot>().buildCanvas;
+        buildCanvas.SetActive(true);
+        BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
+        bm.ChangeEnableColor();
+        bm.ChangeTowerBuildColor();
     }
 }

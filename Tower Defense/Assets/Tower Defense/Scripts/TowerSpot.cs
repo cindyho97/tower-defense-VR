@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class TowerSpot : MonoBehaviour {
 
-    public Canvas buildCanvas;
+    public GameObject buildCanvas;
 
     public void OnTowerSpotSelect()
     {
-        Debug.Log("Tower spot clicked");
-
-        buildCanvas.gameObject.SetActive(true);
+        buildCanvas.SetActive(true);
     }
 }
