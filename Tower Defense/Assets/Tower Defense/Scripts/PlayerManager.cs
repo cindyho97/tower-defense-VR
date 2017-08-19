@@ -12,9 +12,9 @@ public class PlayerManager : MonoBehaviour,IGameManager {
 	
     public void Startup()
     {
-        Debug.Log("Player manager starting...");
         // TODO: update saved data from player
-        UpdateData(100, 100, 50);
+        UpdateData(100, 100, 1);
+
         status = ManagerStatus.Started;
     }
 

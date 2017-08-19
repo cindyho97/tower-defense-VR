@@ -1,16 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour {
 
     private GameObject selectedTower;
 
-    public GameObject arrowTowerPrefab;
-    public GameObject magicTowerPrefab;
-    public GameObject canonTowerPrefab;
+    public GameObject[] towerPrefabs;
 
+    public Image[] towerImages;
     private int towerCost;
+
+    public Sprite[] enabledSprites;
+
+
+    private void Start()
+    {
+        // Activate tower image if enough money
+        int imageIndex = 0;
+        foreach(GameObject towerPrefab in towerPrefabs)
+        {
+            if(Managers.Player.coins >= towerPrefab.GetComponent<Tower>().cost)
+            {
+                towerImages[imageIndex].sprite = enabledSprites[imageIndex];
+                imageIndex++;
+            }
+        }
+    }
 
     public void OnTowerTypeSelect(GameObject towerPrefab)
     {
