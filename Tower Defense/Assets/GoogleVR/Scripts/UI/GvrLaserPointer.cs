@@ -110,7 +110,7 @@ public class GvrLaserPointer : GvrBasePointer {
   void Update() {
     if (isHittingTarget) {
       return;
-    }
+        }
 
     LaserVisual.SetDistance(defaultReticleDistance);
   }

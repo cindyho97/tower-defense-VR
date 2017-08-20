@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 342}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 43
+  controlID: 55
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 44
+  controlID: 56
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 45
+  controlID: 57
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,19 +345,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Tower Defense/Scripts
+    - Assets/Tower Defense/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tower Defense/Scripts
+  - Assets/Tower Defense/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Cindy Ho\Documents\Tower Defense Project\Tower Defense
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a280000
-    m_LastClickedID: 10314
-    m_ExpandedIDs: 00000000822700009c2700006429000000ca9a3bffffff7f
+    m_SelectedIDs: 5e290000
+    m_LastClickedID: 10590
+    m_ExpandedIDs: 0000000088270000a42700007029000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -385,7 +385,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000822700009c27000064290000
+    m_ExpandedIDs: 0000000088270000a427000070290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -410,8 +410,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: ea2a0000
+    m_LastClickedInstanceID: 10986
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -500,10 +500,10 @@ MonoBehaviour:
     width: 339
     height: 435
   m_TreeViewState:
-    scrollPos: {x: 0, y: 142}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: fa88ffff62c4ffff74c4ffff74fbffff1afcffff00000000642a0000742a0000822a00002e2b00007c2b0000
+    scrollPos: {x: 0, y: 94}
+    m_SelectedIDs: 0c2c0000
+    m_LastClickedID: 11276
+    m_ExpandedIDs: 74fbffff1afcffff00000000c22a0000d42a0000ea2a0000242b0000842b0000a02b00000c2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -583,13 +583,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.10032873, y: -0.07842263, z: 0.00795101, w: -0.99186033}
+    m_Target: {x: -0.019515302, y: -0.17103045, z: 0.0034039614, w: -0.98510087}
     speed: 2
-    m_Value: {x: -0.10032541, y: -0.078420036, z: 0.007950747, w: -0.9918276}
+    m_Value: {x: -0.019514645, y: -0.17102468, z: 0.0034038466, w: -0.9850676}
   m_Size:
-    m_Target: 36.93685
+    m_Target: 19.443094
     speed: 2
-    m_Value: 36.93685
+    m_Value: 19.443094
   m_Ortho:
     m_Target: 0
     speed: 2

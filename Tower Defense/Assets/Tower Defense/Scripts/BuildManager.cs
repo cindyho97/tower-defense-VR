@@ -14,8 +14,6 @@ public class BuildManager : MonoBehaviour {
     public Image arrowImage;
     public Image magicImage;
     public Image canonImage;
-
-    private int towerCost;
     
     public bool towerBuild = false;
 
@@ -23,6 +21,8 @@ public class BuildManager : MonoBehaviour {
     private Color red = new Color(255, 0, 0, 200);
     private Color white = new Color(255, 255, 255);
     private Image currentImage;
+    private Vector3 platformPosition;
+    private Quaternion platformRotation;
 
     private void Start()
     {
@@ -78,7 +78,6 @@ public class BuildManager : MonoBehaviour {
 
     public void BuildTower()
     {
-        // FIXME: coins added after buying towers
         if(selectedTower != null)
         {
             if (Managers.Player.coins < selectedTower.GetComponent<Tower>().cost || previousTower == selectedTower)
@@ -87,11 +86,9 @@ public class BuildManager : MonoBehaviour {
                 return;
             }
 
-            towerCost = selectedTower.GetComponent<Tower>().cost;
-
-            previousTower = selectedTower;
-
+            int towerCost = selectedTower.GetComponent<Tower>().cost;
             Managers.Player.UpdateCoins(-towerCost);
+
             if (towerBuild)
             {
                 currentImage.color = white;
@@ -100,13 +97,16 @@ public class BuildManager : MonoBehaviour {
             }
             else
             {
-                GameObject platform = GameObject.Find("Platform");
+                GameObject platform = transform.parent.Find("Platform").gameObject;
+
+                platformPosition = platform.transform.position;
+                platformRotation = platform.transform.rotation;
                 Destroy(platform);
                 towerBuild = true;
             }
 
-            Instantiate(selectedTower, transform.parent.position, transform.parent.rotation,transform.parent);
-            
+            Instantiate(selectedTower, platformPosition, platformRotation, transform.parent);
+            previousTower = selectedTower;
             gameObject.SetActive(false);
         }
     }
