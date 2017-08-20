@@ -16,15 +16,11 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
         player.transform.position = cameraStartPosition;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 
     public void OnPointerClick(PointerEventData eventData)
     {
         player.transform.position = cameraPosition.transform.position;
-        player.transform.rotation = cameraPosition.transform.rotation;
+        //player.transform.rotation = cameraPosition.transform.rotation;
     }
     
 }
