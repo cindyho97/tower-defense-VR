@@ -8,6 +8,13 @@ public class TowerSpot : MonoBehaviour {
 
     public void OnTowerSpotSelect()
     {
-        buildCanvas.SetActive(true);
+        if(buildCanvas.activeSelf == true)
+        {
+            buildCanvas.SetActive(false);
+        }
+        else
+        {
+            buildCanvas.SetActive(true);
+        }
     }
 }

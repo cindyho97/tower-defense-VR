@@ -21,7 +21,6 @@ public class EnemyManager : MonoBehaviour, IGameManager {
     private void Update()
     {
         CheckNrOfEnemies();
-        Debug.Log("Enemy count: " + enemyCount);
     }
 
     void UpdateData(int enemyCount, int nrWaves)

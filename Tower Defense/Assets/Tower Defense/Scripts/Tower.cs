@@ -87,9 +87,17 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
         buildCanvas = transform.parent.GetComponent<TowerSpot>().buildCanvas;
-        buildCanvas.SetActive(true);
-        BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
-        bm.ChangeEnableColor();
-        bm.ChangeTowerBuildColor();
+
+        if(buildCanvas.activeSelf == true) // buildCanvas is already active
+        {
+            buildCanvas.SetActive(false);
+        }
+        else
+        {
+            buildCanvas.SetActive(true);
+            BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
+            bm.ChangeEnableColor();
+            bm.ChangeTowerBuildColor();
+        }
     }
 }
