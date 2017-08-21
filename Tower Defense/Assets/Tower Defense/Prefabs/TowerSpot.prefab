@@ -366,9 +366,9 @@ MonoBehaviour:
   arrowImage: {fileID: 114680046694190662}
   magicImage: {fileID: 114715706374891766}
   canonImage: {fileID: 114650008463216614}
-  arrowCost: {fileID: 114853149836652828}
-  magicCost: {fileID: 114705608628747604}
-  canonCost: {fileID: 114027530163565052}
+  arrowCostText: {fileID: 114853149836652828}
+  magicCostText: {fileID: 114705608628747604}
+  canonCostText: {fileID: 114027530163565052}
   towerBuild: 0
 --- !u!114 &114126703325607074
 MonoBehaviour:
