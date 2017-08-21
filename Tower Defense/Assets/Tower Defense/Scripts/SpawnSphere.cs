@@ -8,7 +8,7 @@ public class SpawnSphere : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
@@ -18,8 +18,7 @@ public class SpawnSphere : MonoBehaviour {
 
     public void OnSpawnSphere()
     {
-        enemySpawner = transform.parent.GetChild(0).GetComponent<EnemySpawner>();
-        Debug.Log("enemyspawner = " + enemySpawner);
+        enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawners").transform.GetChild(0).GetComponent<EnemySpawner>();
         enemySpawner.timeBeforeWave = 0;
     }
 }
