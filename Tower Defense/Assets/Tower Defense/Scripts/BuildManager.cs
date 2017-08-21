@@ -15,25 +15,33 @@ public class BuildManager : MonoBehaviour {
     public Image magicImage;
     public Image canonImage;
 
-    public Text arrowCost;
-    public Text magicCost;
-    public Text canonCost;
+    public Text arrowCostText;
+    public Text magicCostText;
+    public Text canonCostText;
     
     public bool towerBuild = false;
+    private int arrowCost;
+    private int magicCost;
+    private int canonCost;
 
     private GameObject previousTower;
     private Color red = new Color(255, 0, 0, 200);
     private Color white = new Color(255, 255, 255);
-    private Color gray = new Color(130, 130, 130);
+    private Color gray = new Color32(130, 130, 130,255);
     private Image currentImage;
     private Vector3 platformPosition;
     private Quaternion platformRotation;
 
     private void Start()
     {
-        arrowCost.text = arrowPrefab.GetComponent<Tower>().cost.ToString();
-        magicCost.text = magicPrefab.GetComponent<Tower>().cost.ToString();
-        canonCost.text = canonPrefab.GetComponent<Tower>().cost.ToString();
+        arrowCost = arrowPrefab.GetComponent<Tower>().cost;
+        magicCost = magicPrefab.GetComponent<Tower>().cost;
+        canonCost = canonPrefab.GetComponent<Tower>().cost;
+
+        arrowCostText.text = arrowCost.ToString();
+        magicCostText.text = magicCost.ToString();
+        canonCostText.text = canonCost.ToString();
+
         ChangeEnableColor();     
     }
 
@@ -58,45 +66,20 @@ public class BuildManager : MonoBehaviour {
 
     public void ChangeEnableColor()
     {
-        Debug.Log("in enable color: " + Managers.Player.coins);
-        Debug.Log("in enable color tower cost" + canonPrefab.GetComponent<Tower>().cost);
-        if(Managers.Player.coins >= arrowPrefab.GetComponent<Tower>().cost)
-        {
-            arrowImage.color = white;
-        }
-        else
-        {
-            arrowImage.color = gray;
-        }
-        
-        if(Managers.Player.coins >= magicPrefab.GetComponent<Tower>().cost)
-        {
-            magicImage.color = white; ;
-        }
-        else
-        {
-            magicImage.color = gray;
-        }
-
-        if(Managers.Player.coins >= canonPrefab.GetComponent<Tower>().cost)
-        {
-            canonImage.color = white;
-        }
-        else
-        {
-            canonImage.color = gray;
-            Debug.Log("canon image color: " + canonImage.color);
-            Debug.Log("hier!");
-        }
+        arrowImage.color = (Managers.Player.coins >= arrowCost) ? white : gray;
+        magicImage.color = (Managers.Player.coins >= magicCost) ? white : gray;
+        canonImage.color = (Managers.Player.coins >= canonCost) ? white : gray;
     }
 
     public void OnTowerTypeSelect(GameObject towerPrefab)
     {
         selectedTower = towerPrefab;
+
         if(previousTower != null)
         {
             towerBuild = true;
         }
+
         BuildTower();
     }
 
@@ -112,7 +95,6 @@ public class BuildManager : MonoBehaviour {
 
             int towerCost = selectedTower.GetComponent<Tower>().cost;
             Managers.Player.UpdateCoins(-towerCost);
-            Debug.Log(Managers.Player.coins);
  
             if (towerBuild)
             {
