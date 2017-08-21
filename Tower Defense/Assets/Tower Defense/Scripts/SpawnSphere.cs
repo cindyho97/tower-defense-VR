@@ -20,6 +20,6 @@ public class SpawnSphere : MonoBehaviour {
     {
         enemySpawner = transform.parent.GetChild(0).GetComponent<EnemySpawner>();
         Debug.Log("enemyspawner = " + enemySpawner);
-        enemySpawner.spawnEnemyCDRemaining = 0;
+        enemySpawner.timeBeforeWave = 0;
     }
 }

@@ -9,6 +9,8 @@ public class InfoController : MonoBehaviour {
     public Text healthText;
     public Text maxHealthText;
     public Text coinsText;
+    public Text waveText;
+
 
     private void Awake()
     {
@@ -16,6 +18,7 @@ public class InfoController : MonoBehaviour {
         Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
         Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
+        Messenger.AddListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
     }
 
     private void OnDestroy()
@@ -24,6 +27,7 @@ public class InfoController : MonoBehaviour {
         Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
         Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
+        Messenger.AddListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
     }
 
     private void OnHealthUpdated()
@@ -36,6 +40,11 @@ public class InfoController : MonoBehaviour {
         coinsText.text = Managers.Player.coins.ToString();
     }
 
+    private void OnWaveUpdated()
+    {
+        waveText.text = Managers.EnemyMan.nrWaves.ToString();
+    }
+
     private void OnLevelComplete()
     {
         StartCoroutine(CompleteLevel());
@@ -44,6 +53,7 @@ public class InfoController : MonoBehaviour {
     private IEnumerator CompleteLevel()
     {
         // TODO: show level complete screen
+        Debug.Log("Level Completed!");
         yield return new WaitForSeconds(0);
         // TODO: go to next level
     }
@@ -56,7 +66,7 @@ public class InfoController : MonoBehaviour {
     private IEnumerator FailLevel()
     {
         // TODO: show level failed screen
-        
+        Debug.Log("Level Failed!");
         yield return new WaitForSeconds(0);
 
         Managers.Player.Respawn();

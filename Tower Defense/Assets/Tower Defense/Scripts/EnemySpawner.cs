@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
-    float spawnEnemyCD = 0.5f;
-    public float spawnEnemyCDRemaining = 10;
+
+    bool enemySpawned = false;
+    public float timeBeforeWave = 10;
+    float spawnCDBetweenEnemies = 1f;
+    [System.NonSerialized]
+    public bool wavesCompleted = false;
+
+
 
     [System.Serializable]
     public class WaveComponent
@@ -22,41 +28,52 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 
         
-        spawnEnemyCDRemaining -= Time.deltaTime;
-        if(spawnEnemyCDRemaining < 0)
+        timeBeforeWave -= Time.deltaTime;
+        if(timeBeforeWave < 0)
         {
-            bool didSpawn = false;
-            spawnEnemyCDRemaining = spawnEnemyCD;
+            enemySpawned = false;
+            timeBeforeWave = spawnCDBetweenEnemies;
 
-            // Go through wave comps until we find something to spawn
-
-            foreach(WaveComponent waveComp in waveComps)
-            {
-                if(waveComp.spawned < waveComp.nrOfEnemies)
-                {
-                    // spawn enemy
-                    waveComp.spawned++;
-                    Instantiate(waveComp.enemyPrefab, transform.position, transform.rotation);
-                    didSpawn = true;
-                    break;
-                }
-            }
-
-            if (didSpawn == false)
-            {
-                // Wave completed
-                // TODO: Instantiate next wave object
-                if(transform.parent.childCount > 1)
-                {
-                    transform.parent.GetChild(1).gameObject.SetActive(true);
-                }
-                else
-                {
-                    // No more enemy waves
-                }
-                
-                Destroy(gameObject);
-            }
+            SpawnEnemy();
+            GetNextWave();
         }
 	}
+
+    private void SpawnEnemy()
+    {
+        // Go through wave comps until we find something to spawn
+
+        foreach (WaveComponent waveComp in waveComps)
+        {
+            if (waveComp.spawned < waveComp.nrOfEnemies)
+            {
+                // Spawn enemy
+                waveComp.spawned++;
+                Instantiate(waveComp.enemyPrefab, transform.position, transform.rotation);
+                enemySpawned = true;
+                Managers.EnemyMan.enemyCount++;
+                break;
+            }
+        }
+    }
+
+    private void GetNextWave()
+    {
+        if (enemySpawned == false)
+        {
+            // Wave completed
+            Managers.EnemyMan.UpdateNrWaves();
+            if (transform.parent.childCount > 1)
+            {
+                transform.parent.GetChild(1).gameObject.SetActive(true);
+            }
+            else
+            {
+                // No more enemy waves
+                Managers.EnemyMan.wavesCompleted = true;
+            }
+
+            Destroy(gameObject);
+        }
+    }
 }

@@ -70,6 +70,7 @@ public class Enemy : MonoBehaviour {
         // Enemy arrives at castle
         Debug.Log("Reached Goal!");
         Managers.Player.UpdateHealth(-20);
+        Managers.EnemyMan.enemyCount--;
         Destroy(gameObject);
     }
 
@@ -87,6 +88,7 @@ public class Enemy : MonoBehaviour {
     private IEnumerator Die()
     { 
         Managers.Player.UpdateCoins(coinValue);
+        Managers.EnemyMan.enemyCount--;
         // Start death animation
         yield return new WaitForSeconds(0);
         Destroy(gameObject);

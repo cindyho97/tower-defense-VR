@@ -6,15 +6,18 @@ using UnityEngine;
 public class Managers : MonoBehaviour {
 
 	public static PlayerManager Player { get; private set; }
+    public static EnemyManager EnemyMan { get; private set; }
 
     private List<IGameManager> startSequence;
 
     private void Awake()
     {
         Player = GetComponent<PlayerManager>();
+        EnemyMan = GetComponent<EnemyManager>();
 
         startSequence = new List<IGameManager>();
         startSequence.Add(Player);
+        startSequence.Add(EnemyMan);
 
         StartCoroutine(StartupManagers());
     }
