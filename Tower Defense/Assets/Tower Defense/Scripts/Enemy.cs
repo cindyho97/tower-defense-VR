@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
     private int pathNodeIndex = 0;
     private Transform targetPathNode;
+    private int barHealth;
 
     public GameObject path;
     public float speed;
     public int health;
     public int coinValue;
+    public Image healthBarImage;
 
     private void Start()
     {
         path = GameObject.Find("Path");
+        barHealth = health;
     }
 
     // Update is called once per frame
@@ -78,6 +82,8 @@ public class Enemy : MonoBehaviour {
     {
         // Enemy hit by bullet
         health -= damage;
+
+        healthBarImage.fillAmount = barHealth / health;
         
         if(health <= 0)
         {
