@@ -177,7 +177,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!114 &114519391598999292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   speed: 5
-  health: 3
+  startHealth: 3
   coinValue: 2
   healthBarImage: {fileID: 114427848457143114}
 --- !u!114 &114707456995473778

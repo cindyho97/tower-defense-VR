@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
     private int pathNodeIndex = 0;
     private Transform targetPathNode;
-    private int barHealth;
+    protected int health;
 
     public GameObject path;
     public float speed;
-    public int health;
+    public int startHealth;
     public int coinValue;
     public Image healthBarImage;
 
     private void Start()
     {
         path = GameObject.Find("Path");
-        barHealth = health;
+        health = startHealth;
     }
 
     // Update is called once per frame
@@ -80,10 +80,11 @@ public class Enemy : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+        
         // Enemy hit by bullet
         health -= damage;
 
-        healthBarImage.fillAmount = barHealth / health;
+        healthBarImage.fillAmount = (float)health / startHealth;
         
         if(health <= 0)
         {

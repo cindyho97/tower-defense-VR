@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Tower : MonoBehaviour, IPointerClickHandler {
     private Transform weaponTransform;
 
-    private float fireCooldown = 1f;
+    private float fireCooldown = 1.5f;
     private float fireCooldownLeft = 0f;
 
     public GameObject bulletPrefab;
