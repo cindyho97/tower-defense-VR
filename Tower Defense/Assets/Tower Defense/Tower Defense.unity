@@ -2193,12 +2193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fedd7a08301dc94b8aaf7a8002f3bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeWave: 10
-  respawnTimerBar: {fileID: 0}
   waveComps:
   - enemyPrefab: {fileID: 1660281569232170, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 2
+  timeBeforeWave: 10
 --- !u!1 &834529966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,12 +2238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fedd7a08301dc94b8aaf7a8002f3bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeWave: 60
-  respawnTimerBar: {fileID: 0}
   waveComps:
   - enemyPrefab: {fileID: 1660281569232170, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 2
+  timeBeforeWave: 60
 --- !u!1 &852844399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,12 +4261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fedd7a08301dc94b8aaf7a8002f3bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeWave: 10
-  respawnTimerBar: {fileID: 0}
   waveComps:
   - enemyPrefab: {fileID: 1971016249360996, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
     nrOfEnemies: 2
+  timeBeforeWave: 10
 --- !u!1 &1562652035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5676,9 +5673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fedd7a08301dc94b8aaf7a8002f3bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeWave: 10
-  respawnTimerBar: {fileID: 0}
   waveComps:
   - enemyPrefab: {fileID: 1660281569232170, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 2
+  timeBeforeWave: 10
