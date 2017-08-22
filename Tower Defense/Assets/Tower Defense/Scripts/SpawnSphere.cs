@@ -20,5 +20,6 @@ public class SpawnSphere : MonoBehaviour {
     {
         enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawners").transform.GetChild(0).GetComponent<EnemySpawner>();
         enemySpawner.timeBeforeWave = 0;
+        enemySpawner.timeRespawnBar = 0;
     }
 }

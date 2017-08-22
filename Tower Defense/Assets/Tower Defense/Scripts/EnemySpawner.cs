@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour {
 
+    
+    private float startTimeRespawnBar;
+    private bool enemySpawned = false;
+    private Image respawnTimerBar;
+    private float spawnCDBetweenEnemies = 1f;
 
-    bool enemySpawned = false;
-    public float timeBeforeWave = 10;
-    float spawnCDBetweenEnemies = 1f;
     [System.NonSerialized]
     public bool wavesCompleted = false;
-
-
+    [System.NonSerialized]
+    public float timeRespawnBar;
 
     [System.Serializable]
     public class WaveComponent
@@ -23,12 +26,23 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     public WaveComponent[] waveComps;
-	
-	// Update is called once per frame
-	void Update () {
+    public float timeBeforeWave = 10;
 
-        
+    private void Start()
+    {
+        respawnTimerBar = GameObject.FindGameObjectWithTag("RespawnBar").GetComponent<Image>();
+        startTimeRespawnBar = timeBeforeWave;
+        timeRespawnBar = timeBeforeWave;
+    }
+    // Update is called once per frame
+    void Update () {
+
+        respawnTimerBar.fillAmount = timeRespawnBar / startTimeRespawnBar;
+
         timeBeforeWave -= Time.deltaTime;
+        timeRespawnBar -= Time.deltaTime;
+
+
         if(timeBeforeWave < 0)
         {
             enemySpawned = false;
