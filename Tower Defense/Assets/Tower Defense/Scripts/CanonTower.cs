@@ -6,9 +6,9 @@ public class CanonTower : Tower {
 
 	public CanonTower()
     {
-        range = 25f;
-        cost = 5;
-        damage = 5;
-        explosionRadius = 10f;
+        range = 6f;
+        cost = 125;
+        damage = 4;
+        explosionRadius = 4f;
     }
 }

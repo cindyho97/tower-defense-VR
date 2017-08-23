@@ -6,8 +6,8 @@ public class ArrowTower : Tower {
 
     public ArrowTower()
     {
-        range = 20f;
-        cost = 1;
-        damage = 1;
+        range = 5f;
+        cost = 70;
+        damage = 2;
     }
 }

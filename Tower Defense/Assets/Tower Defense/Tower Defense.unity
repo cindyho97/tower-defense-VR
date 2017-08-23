@@ -2194,9 +2194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveComps:
-  - enemyPrefab: {fileID: 1660281569232170, guid: 2e62eeca8a433e6479514c1947c4f037,
+  - enemyPrefab: {fileID: 1971016249360996, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 7
   timeBeforeWave: 10
 --- !u!1 &834529966
 GameObject:
@@ -2239,9 +2239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveComps:
-  - enemyPrefab: {fileID: 1660281569232170, guid: 2e62eeca8a433e6479514c1947c4f037,
+  - enemyPrefab: {fileID: 1971016249360996, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 5
   timeBeforeWave: 60
 --- !u!1 &852844399
 GameObject:
@@ -3171,7 +3171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1162882758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4264,7 +4264,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1971016249360996, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 3
   timeBeforeWave: 10
 --- !u!1 &1562652035
 GameObject:
