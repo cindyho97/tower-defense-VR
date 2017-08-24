@@ -6,7 +6,7 @@ public class Goblin : Enemy {
 
 	public Goblin()
     {
-        speed = 1.5f;
+        speed = 2f;
         startHealth = 10;
         coinValue = 3;
     }

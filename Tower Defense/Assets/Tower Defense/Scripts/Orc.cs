@@ -6,7 +6,7 @@ public class Orc : Enemy {
 
 	public Orc()
     {
-        speed = 1f;
+        speed = 1.5f;
         startHealth = 20;
         coinValue = 9;
     }

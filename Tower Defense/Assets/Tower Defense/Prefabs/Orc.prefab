@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660281569232170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.29392, y: 0.60163975, z: 3.7554739}
+  m_LocalPosition: {x: 2.308949, y: 3.7681656, z: -6.7737436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224611092939533266}
@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  speed: 1
-  startHealth: 10
-  coinValue: 10
+  speed: 1.5
+  startHealth: 20
+  coinValue: 9
   healthBarImage: {fileID: 114814285416394580}
 --- !u!114 &114343850451654478
 MonoBehaviour:

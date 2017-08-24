@@ -6,7 +6,7 @@ public class MagicTower : Tower {
 
 	public MagicTower()
     {
-        range = 7f;
+        range = 6f;
         cost = 100;
         damage = 5;
     }
