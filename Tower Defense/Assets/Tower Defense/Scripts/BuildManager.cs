@@ -18,6 +18,9 @@ public class BuildManager : MonoBehaviour {
     public Text arrowCostText;
     public Text magicCostText;
     public Text canonCostText;
+
+    public GameObject buildTimeCanvas;
+    public Image buildTimeBar;
     
     public bool towerBuild = false;
     private int arrowCost;
@@ -32,6 +35,10 @@ public class BuildManager : MonoBehaviour {
     private Vector3 platformPosition;
     private Quaternion platformRotation;
 
+    private bool buildingNow = false;
+    private float buildTimeRemaining;
+    private int buildStartTime = 3;
+
     private void Start()
     {
         arrowCost = arrowPrefab.GetComponent<Tower>().cost;
@@ -42,10 +49,11 @@ public class BuildManager : MonoBehaviour {
         magicCostText.text = magicCost.ToString();
         canonCostText.text = canonCost.ToString();
 
-        ChangeEnableColor();     
+        ChangeEnableColor();
+        buildTimeRemaining = buildStartTime;
     }
 
-    // Give tower already build a special color
+    // Give existing towers a special color
     public void ChangeTowerBuildColor()
     {
         if(previousTower == arrowPrefab)
@@ -80,23 +88,33 @@ public class BuildManager : MonoBehaviour {
             towerBuild = true;
         }
 
+        CheckTowerAvailable();
         BuildTower();
+    }
+
+    private void CheckTowerAvailable()
+    {
+        if (Managers.Player.coins < selectedTower.GetComponent<Tower>().cost)
+        {
+            Debug.Log("Not enough money!");
+            return;
+        }
+        else if(previousTower == selectedTower)
+        {
+            Debug.Log("Can't buy the same tower.");
+            return;
+        }
+
+        int towerCost = selectedTower.GetComponent<Tower>().cost;
+        Managers.Player.UpdateCoins(-towerCost);
     }
 
     public void BuildTower()
     {
         if(selectedTower != null)
         {
-            if (Managers.Player.coins < selectedTower.GetComponent<Tower>().cost || previousTower == selectedTower)
-            {
-                Debug.Log("Not enough money or same tower");
-                return;
-            }
-
-            int towerCost = selectedTower.GetComponent<Tower>().cost;
-            Managers.Player.UpdateCoins(-towerCost);
- 
-            if (towerBuild)
+            
+            if (towerBuild) // Tower already exists
             {
                 currentImage.color = white;
                 GameObject currentTower = transform.parent.gameObject.GetComponentInChildren<Tower>().gameObject;
@@ -105,18 +123,53 @@ public class BuildManager : MonoBehaviour {
             else
             {
                 GameObject platform = transform.parent.Find("Platform").gameObject;
-
                 platformPosition = platform.transform.position;
                 platformRotation = platform.transform.rotation;
                 Destroy(platform);
                 towerBuild = true;
             }
 
-            Instantiate(selectedTower, platformPosition, platformRotation, transform.parent);
-            previousTower = selectedTower;
-            gameObject.SetActive(false);
+            DisableBuildCanvas();
+
+            StartCoroutine(WaitForBuiltTime());
+            
         }
     }
+
+    private IEnumerator WaitForBuiltTime()
+    {
+        buildTimeCanvas.SetActive(true);
+        buildingNow = true;
+
+        while(buildTimeRemaining > 0)
+        {
+            buildTimeRemaining -= Time.deltaTime;
+            buildTimeBar.fillAmount = buildTimeRemaining / buildStartTime;
+            yield return null;
+            
+        }
+        Debug.Log("verder");
+        buildTimeCanvas.SetActive(false);
+
+        InstantiateTower();
+    }
+
+    private void InstantiateTower()
+    {
+        Instantiate(selectedTower, platformPosition, platformRotation, transform.parent);
+        previousTower = selectedTower;
+        gameObject.SetActive(false);
+    }
+
+    private void DisableBuildCanvas()
+    {
+        CanvasGroup buildCanvas = GetComponent<CanvasGroup>();
+        buildCanvas.alpha = 0;
+        buildCanvas.interactable = false;
+        buildCanvas.blocksRaycasts = false;
+    }
+
+    
 
 
 }
