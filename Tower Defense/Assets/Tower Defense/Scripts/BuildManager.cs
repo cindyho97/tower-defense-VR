@@ -148,7 +148,7 @@ public class BuildManager : MonoBehaviour {
             yield return null;
             
         }
-        Debug.Log("verder");
+
         buildTimeCanvas.SetActive(false);
 
         InstantiateTower();
