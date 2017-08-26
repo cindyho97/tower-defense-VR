@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4712265575359678}
   - component: {fileID: 33394939998254698}
   - component: {fileID: 23640031236989948}
-  - component: {fileID: 95292600201105414}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -39,7 +38,7 @@ GameObject:
   - component: {fileID: 4969575708960238}
   - component: {fileID: 33041388692732960}
   - component: {fileID: 23102708965530236}
-  - component: {fileID: 95124828579240748}
+  - component: {fileID: 64272378658561280}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -70,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1999256241554578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.278368, y: -0.08648395, z: 2.1215253}
+  m_LocalPosition: {x: -21.991268, y: -0.08648395, z: 1.6435053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4712265575359678}
@@ -182,40 +181,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1807263045879024}
   m_Mesh: {fileID: 4300000, guid: 042e0df6a6bc6d34ea45061eea877248, type: 3}
---- !u!95 &95124828579240748
-Animator:
-  serializedVersion: 3
+--- !u!64 &64272378658561280
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976635896355520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0d5d024d785693947b13948935db486b, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95292600201105414
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1807263045879024}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 042e0df6a6bc6d34ea45061eea877248, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 348130852b640884fb1d7b7496917add, type: 3}
 --- !u!114 &114335773720496560
 MonoBehaviour:
   m_ObjectHideFlags: 1

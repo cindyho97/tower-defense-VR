@@ -15,7 +15,7 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     public int cost;
     public int damage;
 
-    private GameObject buildCanvas;
+    private BuildManager buildCanvas;
 
     // Canon tower
     public float explosionRadius = 0;
@@ -23,7 +23,6 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
 	// Use this for initialization
 	void Start () {
         weaponTransform = transform.Find("Weapon");
-        Debug.Log(weaponTransform);
 	}
 	
 	// Update is called once per frame
@@ -87,9 +86,20 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     // Click on tower
     public void OnPointerClick(PointerEventData eventData)
     {
-        buildCanvas = transform.parent.GetComponent<TowerSpot>().buildCanvas;
 
-        if(buildCanvas.activeSelf == true) // buildCanvas is already active
+        buildCanvas = transform.parent.GetComponent<TowerSpot>().buildCanvas.GetComponent<BuildManager>();
+        CanvasGroup buildCanvasGroup = buildCanvas.GetComponent<CanvasGroup>();
+        if(buildCanvasGroup.alpha == 1) // buildCanvas is already active
+        {
+            buildCanvas.SetBuildCanvas(false);
+        }
+        else
+        {
+            buildCanvas.SetBuildCanvas(true);
+            buildCanvas.ChangeEnableColor();
+            buildCanvas.ChangeTowerBuildColor();
+        }
+        /*if(buildCanvas.activeSelf == true) // buildCanvas is already active
         {
             buildCanvas.SetActive(false);
         }
@@ -97,8 +107,9 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
         {
             buildCanvas.SetActive(true);
             BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
+            bm.buildCanvasGroup
             bm.ChangeEnableColor();
             bm.ChangeTowerBuildColor();
-        }
+        }*/
     }
 }

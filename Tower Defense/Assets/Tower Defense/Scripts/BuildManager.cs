@@ -129,7 +129,7 @@ public class BuildManager : MonoBehaviour {
                 towerBuild = true;
             }
 
-            DisableBuildCanvas();
+            SetBuildCanvas(false);
 
             StartCoroutine(WaitForBuiltTime());
             
@@ -158,15 +158,24 @@ public class BuildManager : MonoBehaviour {
     {
         Instantiate(selectedTower, platformPosition, platformRotation, transform.parent);
         previousTower = selectedTower;
-        gameObject.SetActive(false);
+        SetBuildCanvas(false);
     }
 
-    private void DisableBuildCanvas()
+    public void SetBuildCanvas(bool enableCanvas)
     {
-        CanvasGroup buildCanvas = GetComponent<CanvasGroup>();
-        buildCanvas.alpha = 0;
-        buildCanvas.interactable = false;
-        buildCanvas.blocksRaycasts = false;
+        CanvasGroup buildCanvasGroup = GetComponent<CanvasGroup>();
+        if (enableCanvas)
+        {
+            buildCanvasGroup.alpha = 1;
+            buildCanvasGroup.interactable = true;
+            buildCanvasGroup.blocksRaycasts = true;
+        }
+        else
+        {
+            buildCanvasGroup.alpha = 0;
+            buildCanvasGroup.interactable = false;
+            buildCanvasGroup.blocksRaycasts = false;
+        }   
     }
 
     
