@@ -342,7 +342,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932896907920174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.2, y: 0, z: 5.2}
+  m_LocalPosition: {x: -17.2, y: 0, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224269412477770044}
@@ -470,6 +470,7 @@ MonoBehaviour:
   arrowImage: {fileID: 114515410947361970}
   magicImage: {fileID: 114715706374891766}
   canonImage: {fileID: 114650008463216614}
+  playerCoinsText: {fileID: 114853149836652828}
   arrowCostText: {fileID: 114848596384872452}
   magicCostText: {fileID: 114705608628747604}
   canonCostText: {fileID: 114027530163565052}
@@ -1313,14 +1314,14 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1746935110507002}
-  m_LocalRotation: {x: -0, y: -0.49227664, z: -0, w: 0.8704389}
+  m_LocalRotation: {x: -0, y: -0.88193554, z: -0, w: 0.4713701}
   m_LocalPosition: {x: 0, y: 0, z: 3.18}
   m_LocalScale: {x: 0.003, y: 0.003, z: 0.0023}
   m_Children:
   - {fileID: 224983077044262636}
   m_Father: {fileID: 4492250772772250}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -58.981003, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -123.753006, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -3.46, y: 3}

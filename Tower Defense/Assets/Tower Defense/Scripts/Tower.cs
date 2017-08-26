@@ -95,21 +95,10 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
         }
         else
         {
+            buildCanvas.playerCoinsText.text = Managers.Player.coins.ToString();
             buildCanvas.SetBuildCanvas(true);
             buildCanvas.ChangeEnableColor();
             buildCanvas.ChangeTowerBuildColor();
         }
-        /*if(buildCanvas.activeSelf == true) // buildCanvas is already active
-        {
-            buildCanvas.SetActive(false);
-        }
-        else
-        {
-            buildCanvas.SetActive(true);
-            BuildManager bm = GameObject.FindObjectOfType<BuildManager>();
-            bm.buildCanvasGroup
-            bm.ChangeEnableColor();
-            bm.ChangeTowerBuildColor();
-        }*/
     }
 }

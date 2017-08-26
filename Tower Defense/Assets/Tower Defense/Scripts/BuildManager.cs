@@ -15,6 +15,7 @@ public class BuildManager : MonoBehaviour {
     public Image magicImage;
     public Image canonImage;
 
+    public Text playerCoinsText;
     public Text arrowCostText;
     public Text magicCostText;
     public Text canonCostText;
@@ -45,6 +46,7 @@ public class BuildManager : MonoBehaviour {
         magicCost = magicPrefab.GetComponent<Tower>().cost;
         canonCost = canonPrefab.GetComponent<Tower>().cost;
 
+        playerCoinsText.text = Managers.Player.coins.ToString();
         arrowCostText.text = arrowCost.ToString();
         magicCostText.text = magicCost.ToString();
         canonCostText.text = canonCost.ToString();
@@ -107,6 +109,7 @@ public class BuildManager : MonoBehaviour {
 
         int towerCost = selectedTower.GetComponent<Tower>().cost;
         Managers.Player.UpdateCoins(-towerCost);
+        playerCoinsText.text = Managers.Player.coins.ToString();
     }
 
     public void BuildTower()

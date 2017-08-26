@@ -1178,35 +1178,6 @@ Prefab:
       propertyPath: m_Name
       value: TowerSpot (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1746935110507002, guid: f17c68de4b7d66846a9d59032af04310, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224401805238589778, guid: f17c68de4b7d66846a9d59032af04310,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224401805238589778, guid: f17c68de4b7d66846a9d59032af04310,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.88193554
-      objectReference: {fileID: 0}
-    - target: {fileID: 224401805238589778, guid: f17c68de4b7d66846a9d59032af04310,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224401805238589778, guid: f17c68de4b7d66846a9d59032af04310,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.4713701
-      objectReference: {fileID: 0}
-    - target: {fileID: 224401805238589778, guid: f17c68de4b7d66846a9d59032af04310,
-        type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -123.753006
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f17c68de4b7d66846a9d59032af04310, type: 2}
   m_IsPrefabParent: 0
