@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6c4f4b460a7804cb67833062b3931c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 1118775821271786, guid: 3556d624fe18e184d8da991d5f5d4054,
+  arrowPrefab: {fileID: 1658260326029708, guid: 03e101eb09a77564f84f66dc31f3f207,
     type: 2}
   magicPrefab: {fileID: 1280413492144580, guid: 3abe916c2d4e74a469fdc89b91ff3ef3,
     type: 2}
@@ -626,7 +626,7 @@ MonoBehaviour:
           m_MethodName: OnTowerTypeSelect
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1142739796665854, guid: 3556d624fe18e184d8da991d5f5d4054,
+            m_ObjectArgument: {fileID: 1658260326029708, guid: 03e101eb09a77564f84f66dc31f3f207,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
