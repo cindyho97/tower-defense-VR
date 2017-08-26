@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 67
+  controlID: 115
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 390
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 426
     height: 587
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 68
+  controlID: 116
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 69
+  controlID: 117
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,33 +345,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Tower Defense/Meshes/FBX
+    - Assets/Tower Defense/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tower Defense/Meshes/FBX
+  - Assets/Tower Defense/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Cindy Ho\Documents\Tower Defense Project\Tower Defense
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bedc0000
-    m_LastClickedID: 56510
-    m_ExpandedIDs: 000000008c270000ae27000086290000b8dc0000bedc000000ca9a3bffffff7f
+    m_SelectedIDs: 96290000
+    m_LastClickedID: 10646
+    m_ExpandedIDs: 000000008a27000090270000b027000002290000a829000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: FBX
-      m_OriginalName: FBX
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 56510
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -385,7 +385,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c270000ae27000086290000
+    m_ExpandedIDs: 000000008a27000090270000b027000002290000a8290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -413,7 +413,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 5cc8feff94fb0000
+    m_ExpandedInstanceIDs: 5cc8feff94fb00000c280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,9 +501,9 @@ MonoBehaviour:
     height: 566
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9afb0000
-    m_LastClickedID: 0
-    m_ExpandedIDs: ce6cfbff0e03fcff70e7fcff067cfdffbc89fdffc4b6fdffc8b6fdff62dbfdff78dbfdff7adbfdff2ceffdff4ceffdff9c0cfeffbc0cfeffbe0cfeff36e0ffff38e0ffff6ae7ffffb4faffffb6faffff1afcffff000000001a2b0000502b0000f82b0000462c0000
+    m_SelectedIDs: 20faffff
+    m_LastClickedID: -1504
+    m_ExpandedIDs: 2cacfbffb033fcffe460feffac57ffff745affff785afffffa9fffff6ef9ffffc4f9ffff20faffff1afcffff00000000402b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -553,14 +553,14 @@ MonoBehaviour:
     width: 1100
     height: 566
   m_SceneLighting: 1
-  lastFramingTime: 6724.15852991268
+  lastFramingTime: 639.1564867778712
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -23.153124, y: -0.23315549, z: 13.317328}
+    m_Target: {x: -19.722622, y: 0.44481754, z: 16.120895}
     speed: 2
-    m_Value: {x: -23.153124, y: -0.23315549, z: 13.317328}
+    m_Value: {x: -19.722622, y: 0.44481754, z: 16.120895}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -583,13 +583,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.17502372, y: 0.16572164, z: -0.029899864, w: -0.97005624}
+    m_Target: {x: -0.27289245, y: 0.33405268, z: -0.10169131, w: -0.896436}
     speed: 2
-    m_Value: {x: -0.17502372, y: 0.16572164, z: -0.029899864, w: -0.97005624}
+    m_Value: {x: -0.27289245, y: 0.33405268, z: -0.10169131, w: -0.896436}
   m_Size:
-    m_Target: 7.9988008
+    m_Target: 23.056929
     speed: 2
-    m_Value: 7.9988008
+    m_Value: 23.056929
   m_Ortho:
     m_Target: 0
     speed: 2

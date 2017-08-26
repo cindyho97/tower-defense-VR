@@ -1,18 +1,14 @@
 fileFormatVersion: 2
-guid: 01e586dcee0d31148991968c4efaad3d
-timeCreated: 1503596301
+guid: 348130852b640884fb1d7b7496917add
+timeCreated: 1503747497
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Empty
-    100002: //RootNode
-    100004: Tower_Base_collider
-    400000: Empty
-    400002: //RootNode
-    400004: Tower_Base_collider
-    2300000: Tower_Base_collider
-    3300000: Tower_Base_collider
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Tower_Base_collider
     7400000: Default Take
     9500000: //RootNode

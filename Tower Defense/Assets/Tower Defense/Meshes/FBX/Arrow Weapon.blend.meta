@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0d5d024d785693947b13948935db486b
-timeCreated: 1503747436
+guid: ed740ab7427c640479bc90fda8b1693b
+timeCreated: 1503747010
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Tower_Base
+    4300000: Arrow_Weapon
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -146,6 +146,7 @@
     <Compile Include="Assets\GoogleVR\Editor\GvrEditorEmulatorEditor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\GvrEditorSettings.cs" />
     <Compile Include="Assets\GoogleVR\Editor\GvrMenu.cs" />
+    <Compile Include="Assets\Tower Defense\Editor\FixBlenderImportRotation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleVR\Demos\Environment\DemoEnvUnlitGrayscale.shader" />

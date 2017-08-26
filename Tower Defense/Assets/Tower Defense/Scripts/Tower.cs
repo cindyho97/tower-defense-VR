@@ -23,6 +23,7 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
 	// Use this for initialization
 	void Start () {
         weaponTransform = transform.Find("Weapon");
+        Debug.Log(weaponTransform);
 	}
 	
 	// Update is called once per frame
