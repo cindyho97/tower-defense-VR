@@ -86,7 +86,6 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     // Click on tower
     public void OnPointerClick(PointerEventData eventData)
     {
-
         buildCanvas = transform.parent.GetComponent<TowerSpot>().buildCanvas.GetComponent<BuildManager>();
         CanvasGroup buildCanvasGroup = buildCanvas.GetComponent<CanvasGroup>();
         if(buildCanvasGroup.alpha == 1) // buildCanvas is already active

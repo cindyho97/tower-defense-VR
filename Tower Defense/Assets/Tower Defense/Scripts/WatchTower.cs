@@ -20,7 +20,6 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
         player.transform.position = cameraPosition.transform.position;
-        //player.transform.rotation = cameraPosition.transform.rotation;
     }
     
 }
