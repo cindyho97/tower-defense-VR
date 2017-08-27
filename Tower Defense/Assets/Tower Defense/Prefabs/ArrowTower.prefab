@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0640273a0d316d14080633076aa58c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1673114381794736, guid: fe06c9da65da2c14ba42f7445345ae74,
+  bulletPrefab: {fileID: 1872515781513600, guid: f852d5fa0156659469a0ea05f295a2f8,
     type: 2}
   range: 10
   cost: 70
