@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
 
     private void Start()
     {
-        path = GameObject.Find("Path");
+        path = GameObject.Find("PathNodes");
         health = startHealth;
     }
 
