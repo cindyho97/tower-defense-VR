@@ -33,8 +33,8 @@ public class BuildManager : MonoBehaviour {
     private Color white = new Color(255, 255, 255);
     private Color gray = new Color32(130, 130, 130,255);
     private Image currentImage;
-    private Vector3 platformPosition;
-    private Quaternion platformRotation;
+    private Vector3 buildSignPosition;
+    private Quaternion buildSignRotation;
 
     private bool buildingNow = false;
     private float buildTimeRemaining;
@@ -125,10 +125,10 @@ public class BuildManager : MonoBehaviour {
             }
             else
             {
-                GameObject platform = transform.parent.Find("Platform").gameObject;
-                platformPosition = platform.transform.position;
-                platformRotation = platform.transform.rotation;
-                Destroy(platform);
+                GameObject buildSign = transform.parent.Find("BuildSign").gameObject;
+                buildSignPosition = buildSign.transform.position;
+                buildSignRotation = buildSign.transform.rotation;
+                Destroy(buildSign);
                 towerBuild = true;
             }
 
@@ -159,7 +159,7 @@ public class BuildManager : MonoBehaviour {
 
     private void InstantiateTower()
     {
-        Instantiate(selectedTower, platformPosition, platformRotation, transform.parent);
+        Instantiate(selectedTower, buildSignPosition, buildSignRotation, transform.parent);
         previousTower = selectedTower;
         SetBuildCanvas(false);
     }
