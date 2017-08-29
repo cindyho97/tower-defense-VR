@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224712273708542174}
   - component: {fileID: 222311299752305132}
   - component: {fileID: 114469186960749008}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MagicCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 224419275630015284}
   - component: {fileID: 222945968079431912}
   - component: {fileID: 114363520910984490}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 23610397651702240}
   - component: {fileID: 64446286256887794}
   - component: {fileID: 114508717128307570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 223618763799466484}
   - component: {fileID: 114478123539492766}
   - component: {fileID: 114598607307047698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildTime Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 114348883571375092}
   - component: {fileID: 114673951008188586}
   - component: {fileID: 225426463563953588}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Build Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 222736851838820768}
   - component: {fileID: 114734061978512876}
   - component: {fileID: 114064796990803354}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: CoinImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 222139910372698446}
   - component: {fileID: 114493298044443718}
   - component: {fileID: 114181439526479196}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MagicImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224952964416451490}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224405655111152700}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 222096431181022352}
   - component: {fileID: 114458502247786296}
   - component: {fileID: 114131060439081634}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ArrowImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 222661530982477846}
   - component: {fileID: 114023029558483556}
   - component: {fileID: 114255142145443964}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: CanonImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 224826960145900370}
   - component: {fileID: 222900696681942580}
   - component: {fileID: 114333918525977800}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: CanonCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224176450786794830}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 224264200185087992}
   - component: {fileID: 222247480576597876}
   - component: {fileID: 114255744150993342}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ArrowCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389736131441978}
   - component: {fileID: 114825935769728222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TowerSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 224260942659655228}
   - component: {fileID: 222113743760152634}
   - component: {fileID: 114126018106124566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BGColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224726080496394058}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: PlayerCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 224144660092499920}
   - component: {fileID: 222424723071709944}
   - component: {fileID: 114250416186796846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BuildTimeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 224914421269058892}
   - component: {fileID: 222338578998472186}
   - component: {fileID: 114934088956160156}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: PlayerCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ MonoBehaviour:
           m_MethodName: OnTowerTypeSelect
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1280413492144580, guid: 3abe916c2d4e74a469fdc89b91ff3ef3,
+            m_ObjectArgument: {fileID: 1955106537828420, guid: c7caa1308aaa62d4ea19895e4266dc5b,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 1736734321677614, guid: 47172d6f3995e51459c9fa28c9cfeade,
     type: 2}
-  magicPrefab: {fileID: 1280413492144580, guid: 3abe916c2d4e74a469fdc89b91ff3ef3,
+  magicPrefab: {fileID: 1955106537828420, guid: c7caa1308aaa62d4ea19895e4266dc5b,
     type: 2}
   canonPrefab: {fileID: 1314772675766072, guid: 1e07fe25658710a4488ff9c0e74d9756,
     type: 2}
