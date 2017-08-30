@@ -5,18 +5,19 @@ using UnityEngine.EventSystems;
 
 public class Tower : MonoBehaviour, IPointerClickHandler {
     private Transform weaponTransform;
+    private BuildManager buildCanvas;
 
     private float fireCooldown = 1.5f;
     private float fireCooldownLeft = 0f;
 
-    public GameObject bulletPrefab;
+    public Transform bulletPosition;
+    public GameObject bulletPrefab; 
 
     public float range;
     public int cost;
     public int damage;
 
-    private BuildManager buildCanvas;
-
+   
     // Canon tower
     public float explosionRadius = 0;
 
@@ -74,7 +75,7 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     {
         // TODO: fire bullet from tip
         Quaternion weaponrot = Quaternion.Euler(0, weaponTransform.rotation.eulerAngles.y + 90, 0);
-        GameObject bullet = Instantiate(bulletPrefab, weaponTransform.position, weaponrot) as GameObject;
+        GameObject bullet = Instantiate(bulletPrefab, bulletPosition.position, weaponrot) as GameObject;
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.target = nearestEnemy.transform;
         bulletScript.damage = damage;
