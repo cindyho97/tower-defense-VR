@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanonExplosion : MonoBehaviour {
+public class BulletExplosion : MonoBehaviour {
 
 	public void DestroyExplosion()
     {

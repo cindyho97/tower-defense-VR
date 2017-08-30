@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4611633141903194}
   - component: {fileID: 135742719781959442}
   - component: {fileID: 114266050400206418}
+  - component: {fileID: 114429020547586786}
   m_Layer: 0
   m_Name: MagicBall
   m_TagString: Untagged
@@ -145,11 +146,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88274615e7e94f04aa7f21ae000fffad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 1770903920307874, guid: c19ebb50335835d4dbc7ff1065a3e905,
+    type: 2}
   target: {fileID: 0}
   speed: 10
   damage: 0
   radius: 0
+--- !u!114 &114429020547586786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596971481530906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180252f2335f84c46bfef0cc215c0211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135742719781959442
 SphereCollider:
   m_ObjectHideFlags: 1

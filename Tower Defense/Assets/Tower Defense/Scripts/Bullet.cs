@@ -42,14 +42,15 @@ public class Bullet : MonoBehaviour {
 
     private void BulletHit()
     {
-        if(radius == 0)
+        GameObject explosion = Instantiate(explosionPrefab, target.position, target.rotation) as GameObject;
+        explosion.GetComponent<BulletExplosion>().DestroyExplosion();
+
+        if (radius == 0)
         {
             target.GetComponent<Enemy>().TakeDamage(damage);
         }
         else // Bullet with area explosion effect
         {
-            GameObject explosion = Instantiate(explosionPrefab, target.position, target.rotation) as GameObject;
-            explosion.GetComponent<CanonExplosion>().DestroyExplosion();
             
             Collider[] cols = Physics.OverlapSphere(transform.position, radius); // Return array of colliders that bullet collides with
 
