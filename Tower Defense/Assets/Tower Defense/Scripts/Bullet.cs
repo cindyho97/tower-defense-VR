@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+    public GameObject explosionPrefab;
     public Transform target;
     public float speed = 10f;
     public int damage;
@@ -43,10 +44,13 @@ public class Bullet : MonoBehaviour {
     {
         if(radius == 0)
         {
-            target.GetComponent<Enemy>().TakeDamage(damage);    
+            target.GetComponent<Enemy>().TakeDamage(damage);
         }
         else // Bullet with area explosion effect
         {
+            GameObject explosion = Instantiate(explosionPrefab, target.position, target.rotation) as GameObject;
+            explosion.GetComponent<CanonExplosion>().DestroyExplosion();
+            
             Collider[] cols = Physics.OverlapSphere(transform.position, radius); // Return array of colliders that bullet collides with
 
             foreach(Collider collider in cols)
@@ -57,11 +61,9 @@ public class Bullet : MonoBehaviour {
                     enemy.GetComponent<Enemy>().TakeDamage(damage);
                 }
             }
+            
         }
-
-        // TODO: spawn explosion object 
         Destroy(gameObject);
-
     }
 
     private void CheckTargetExists()
