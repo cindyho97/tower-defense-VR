@@ -658,7 +658,7 @@ MonoBehaviour:
           m_MethodName: OnTowerTypeSelect
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1314772675766072, guid: 1e07fe25658710a4488ff9c0e74d9756,
+            m_ObjectArgument: {fileID: 1131960793553848, guid: 8b056128f4025fd4ca37a9ba78adf8c1,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
     type: 2}
   magicPrefab: {fileID: 1955106537828420, guid: c7caa1308aaa62d4ea19895e4266dc5b,
     type: 2}
-  canonPrefab: {fileID: 1314772675766072, guid: 1e07fe25658710a4488ff9c0e74d9756,
+  canonPrefab: {fileID: 1131960793553848, guid: 8b056128f4025fd4ca37a9ba78adf8c1,
     type: 2}
   arrowImage: {fileID: 114458502247786296}
   magicImage: {fileID: 114493298044443718}

@@ -2488,7 +2488,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.35
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3181,7 +3181,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.35
   m_Range: 42.319107
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4103,48 +4103,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1021132284}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1029362852
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611633141903194, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: fee8d74788d93ac48b31ebe5e5f18a94, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1047659719
 Prefab:
   m_ObjectHideFlags: 0
@@ -5290,7 +5248,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.35
   m_Range: 42.319107
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -6897,7 +6855,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.35
   m_Range: 42.319107
   m_SpotAngle: 30
   m_CookieSize: 10
