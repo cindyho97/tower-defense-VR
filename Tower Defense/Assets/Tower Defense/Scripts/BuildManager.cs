@@ -152,8 +152,7 @@ public class BuildManager : MonoBehaviour {
             
         }
 
-        buildTimeCanvas.SetActive(false);
-
+        buildTimeRemaining = buildStartTime;
         InstantiateTower();
     }
 
