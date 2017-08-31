@@ -8,8 +8,7 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
     private GameObject player;
     private Vector3 cameraStartPosition;
     private bool playerAtWatchSpot;
-    private Renderer rend;
-    private Collider coll;
+    private GameObject groundSymbol;
 
     public GameObject cameraPosition;
 
@@ -17,8 +16,10 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
     {
         player = GameObject.FindGameObjectWithTag("Player");
         cameraStartPosition = GameObject.FindGameObjectWithTag("CameraStartPosition").transform.position;
-        rend = gameObject.GetComponent<Renderer>();
-        coll = gameObject.GetComponent<Collider>();
+        if (gameObject.name.Contains("WatchSpot"))
+        {
+            groundSymbol = transform.GetChild(0).gameObject;
+        }
         player.transform.position = cameraStartPosition;
     }
 
@@ -32,8 +33,7 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
         if(playerAtWatchSpot && player.transform.position != cameraPosition.transform.position)
         {
             playerAtWatchSpot = false;
-            rend.enabled = true;
-            coll.enabled = true;
+            groundSymbol.SetActive(true);
         }
     }
 
@@ -45,8 +45,7 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
         if (gameObject.name.Contains("WatchSpot"))
         {
             playerAtWatchSpot = true;
-            rend.enabled = false;
-            coll.enabled = false;
+            groundSymbol.SetActive(false);
         }
     }
     
