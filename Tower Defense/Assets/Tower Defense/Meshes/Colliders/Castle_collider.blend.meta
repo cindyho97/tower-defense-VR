@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f45f1f7c4a0648a4a89c545c4b199599
-timeCreated: 1504209533
+guid: 126ca2cccedb17548af1770d704a3651
+timeCreated: 1504209198
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Castle
+    4300000: Castle_collider
     7400000: Default Take
     9500000: //RootNode
   materials:

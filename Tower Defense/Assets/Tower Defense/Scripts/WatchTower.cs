@@ -10,15 +10,16 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
     private bool playerAtWatchSpot;
     private GameObject groundSymbol;
 
-    public GameObject cameraPosition;
+    private Transform cameraPosition;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        cameraPosition = transform.GetChild(0);
         cameraStartPosition = GameObject.FindGameObjectWithTag("CameraStartPosition").transform.position;
         if (gameObject.name.Contains("WatchSpot"))
         {
-            groundSymbol = transform.GetChild(0).gameObject;
+            groundSymbol = transform.GetChild(1).gameObject;
         }
         player.transform.position = cameraStartPosition;
     }
@@ -30,7 +31,7 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
 
     private void CheckPlayerPosition()
     {
-        if(playerAtWatchSpot && player.transform.position != cameraPosition.transform.position)
+        if(playerAtWatchSpot && player.transform.position != cameraPosition.position)
         {
             playerAtWatchSpot = false;
             groundSymbol.SetActive(true);
@@ -40,7 +41,7 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        player.transform.position = cameraPosition.transform.position;
+        player.transform.position = cameraPosition.position;
         
         if (gameObject.name.Contains("WatchSpot"))
         {
