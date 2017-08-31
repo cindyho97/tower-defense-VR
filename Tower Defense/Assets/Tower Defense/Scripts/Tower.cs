@@ -59,16 +59,23 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
 
     private void RotateWeapon(Enemy nearestEnemy)
     {
+        
         Vector3 dir = nearestEnemy.transform.position - transform.position;
-        Quaternion lookRot = Quaternion.LookRotation(dir);
-        weaponTransform.rotation = Quaternion.Euler(0, lookRot.eulerAngles.y, 0);
 
-        fireCooldownLeft -= Time.deltaTime;
-        if (fireCooldownLeft <= 0 && dir.magnitude <= range)
+        // Enemy in range
+        if(dir.magnitude <= range)
         {
-            ShootAt(nearestEnemy);
-            fireCooldownLeft = fireCooldown;
+            Quaternion lookRot = Quaternion.LookRotation(dir);
+            weaponTransform.rotation = Quaternion.Euler(0, lookRot.eulerAngles.y, 0);
+
+            fireCooldownLeft -= Time.deltaTime;
+            if (fireCooldownLeft <= 0)
+            {
+                ShootAt(nearestEnemy);
+                fireCooldownLeft = fireCooldown;
+            }
         }
+        
     }
     
     private void ShootAt(Enemy nearestEnemy)
