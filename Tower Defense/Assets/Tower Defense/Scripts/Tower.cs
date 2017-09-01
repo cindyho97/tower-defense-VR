@@ -82,8 +82,7 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     private void ShootAt(Enemy nearestEnemy)
     {
         // TODO: fire bullet from tip
-        Quaternion weaponrot = Quaternion.Euler(0, weaponTransform.rotation.eulerAngles.y + 90, 0);
-        GameObject bullet = Instantiate(bulletPrefab, bulletPosition.position, weaponrot) as GameObject;
+        GameObject bullet = Instantiate(bulletPrefab, bulletPosition.position, bulletPosition.rotation) as GameObject;
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.target = nearestEnemy.transform;
         bulletScript.damage = damage;

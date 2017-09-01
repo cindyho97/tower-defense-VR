@@ -34,9 +34,10 @@ public class Bullet : MonoBehaviour {
         else
         {
             // Move towards target
-            transform.Translate(dir.normalized * distThisFrame, Space.World);
             Quaternion targetRotation = Quaternion.LookRotation(dir); // Look in direction that enemy is moving
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 0.5f); // Smooth out rotation
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 10f); // Smooth out rotation
+
+            transform.Translate(dir.normalized * distThisFrame, Space.World);
         }
     }
 
