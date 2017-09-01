@@ -66,7 +66,8 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
         if(dir.magnitude <= range)
         {
             Quaternion lookRot = Quaternion.LookRotation(dir);
-            weaponTransform.rotation = Quaternion.Euler(0, lookRot.eulerAngles.y, 0);
+
+            weaponTransform.rotation = Quaternion.Lerp(weaponTransform.rotation, lookRot, Time.deltaTime * 5f);
 
             fireCooldownLeft -= Time.deltaTime;
             if (fireCooldownLeft <= 0)
