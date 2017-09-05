@@ -109,7 +109,7 @@ public class Enemy : MonoBehaviour {
         Managers.Player.UpdateCoins(coinValue);
         Managers.EnemyMan.enemyCount--;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
 
