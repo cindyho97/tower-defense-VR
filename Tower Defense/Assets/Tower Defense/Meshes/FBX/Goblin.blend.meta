@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: dbcd6a1e0b5235441b63120d4323f0f0
-timeCreated: 1504610271
+guid: 071c2f4f6363b1a43a1f3a49cadcf4b6
+timeCreated: 1504624065
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -67,7 +67,23 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Die' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'UpperLeg-L' has translation animation that will be
+      discarded.\n\t'UpperLeg-L' has scale animation that will be discarded.\n\t'LowerLeg-L'
+      has scale animation that will be discarded.\n\t'Foot-L' has scale animation
+      that will be discarded.\n\t'UpperLeg-R' has translation animation that will
+      be discarded.\n\t'UpperLeg-R' has scale animation that will be discarded.\n\t'LowerLeg-R'
+      has scale animation that will be discarded.\n\t'Foot-R' has scale animation
+      that will be discarded.\n\nClip 'Walk' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'UpperLeg-L' has translation animation that will be
+      discarded.\n\t'UpperLeg-L' has scale animation that will be discarded.\n\t'LowerLeg-L'
+      has scale animation that will be discarded.\n\t'Foot-L' has scale animation
+      that will be discarded.\n\t'UpperLeg-R' has translation animation that will
+      be discarded.\n\t'UpperLeg-R' has scale animation that will be discarded.\n\t'LowerLeg-R'
+      has scale animation that will be discarded.\n\t'Foot-R' has scale animation
+      that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
