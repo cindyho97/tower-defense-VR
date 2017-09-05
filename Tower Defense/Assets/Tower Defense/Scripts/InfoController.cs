@@ -14,6 +14,7 @@ public class InfoController : MonoBehaviour {
 
     private void Awake()
     {
+        OnCoinsUpdated();
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
