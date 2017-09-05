@@ -31,7 +31,8 @@ public class BuildManager : MonoBehaviour {
     private GameObject previousTower;
     private Color red = new Color(255, 0, 0, 200);
     private Color white = new Color(255, 255, 255);
-    private Color gray = new Color32(130, 130, 130,255);
+    private Color gray = new Color32(130, 130, 130, 255);
+    private Color yellow = new Color32(244, 225, 66, 255);
     private Image currentImage;
     private Vector3 buildSignPosition;
     private Quaternion buildSignRotation;
@@ -84,6 +85,9 @@ public class BuildManager : MonoBehaviour {
         arrowImage.color = (Managers.Player.coins >= arrowCost) ? white : gray;
         magicImage.color = (Managers.Player.coins >= magicCost) ? white : gray;
         canonImage.color = (Managers.Player.coins >= canonCost) ? white : gray;
+        arrowCostText.color = (Managers.Player.coins >= arrowCost) ? yellow : gray;
+        magicCostText.color = (Managers.Player.coins >= magicCost) ? yellow : gray;
+        canonCostText.color = (Managers.Player.coins >= canonCost) ? yellow : gray;
     }
 
     public void OnTowerTypeSelect(GameObject towerPrefab)
