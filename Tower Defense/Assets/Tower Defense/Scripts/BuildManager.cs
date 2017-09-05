@@ -91,7 +91,7 @@ public class BuildManager : MonoBehaviour {
         }
 
         CheckTowerAvailable();
-        BuildTower();
+        
     }
 
     private void CheckTowerAvailable()
@@ -110,6 +110,7 @@ public class BuildManager : MonoBehaviour {
         int towerCost = selectedTower.GetComponent<Tower>().cost;
         Managers.Player.UpdateCoins(-towerCost);
         playerCoinsText.text = Managers.Player.coins.ToString();
+        BuildTower();
     }
 
     public void BuildTower()
