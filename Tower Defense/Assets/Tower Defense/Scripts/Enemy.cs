@@ -82,8 +82,7 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeDamage(int damage)
-    {
-        
+    { 
         // Enemy hit by bullet
         health -= damage;
 
@@ -98,6 +97,8 @@ public class Enemy : MonoBehaviour {
 
     private IEnumerator Die()
     {
+        DisableHealthBar();
+
         GameObject[] buildManagers = GameObject.FindGameObjectsWithTag("BuildManager");
         for(int i = 0; i < buildManagers.Length; i++)
         {
@@ -107,8 +108,17 @@ public class Enemy : MonoBehaviour {
         anim.SetBool("Die", true);
         Managers.Player.UpdateCoins(coinValue);
         Managers.EnemyMan.enemyCount--;
+
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
+    }
+
+    private void DisableHealthBar()
+    {
+        CanvasGroup healthCanvas = healthBarImage.transform.parent.GetComponentInParent<CanvasGroup>();
+        healthCanvas.alpha = 0;
+        healthCanvas.interactable = false;
+        healthCanvas.blocksRaycasts = false;
     }
 
 
