@@ -7,6 +7,7 @@ TagManager:
   - CameraStartPosition
   - EnemySpawners
   - RespawnBar
+  - BuildManager
   layers:
   - Default
   - TransparentFX

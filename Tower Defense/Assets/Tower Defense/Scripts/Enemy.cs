@@ -61,7 +61,6 @@ public class Enemy : MonoBehaviour {
         }
         else
         {
-            // TODO: smooth out rotation more
             // Move towards node
             transform.Translate(dir.normalized * distThisFrame, Space.World);
             Quaternion targetRot = Quaternion.LookRotation(dir); // Look in direction that enemy is moving
@@ -95,6 +94,11 @@ public class Enemy : MonoBehaviour {
     private IEnumerator Die()
     { 
         Managers.Player.UpdateCoins(coinValue);
+        GameObject[] buildManagers = GameObject.FindGameObjectsWithTag("BuildManager");
+        for(int i = 0; i < buildManagers.Length; i++)
+        {
+            buildManagers[i].GetComponent<BuildManager>().UpdateBuildUI();
+        }
         Managers.EnemyMan.enemyCount--;
         // Start death animation
         yield return new WaitForSeconds(0);

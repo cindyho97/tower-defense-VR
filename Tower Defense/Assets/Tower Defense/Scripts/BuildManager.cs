@@ -55,6 +55,7 @@ public class BuildManager : MonoBehaviour {
         buildTimeRemaining = buildStartTime;
     }
 
+
     // Give existing towers a special color
     public void ChangeTowerBuildColor()
     {
@@ -69,6 +70,10 @@ public class BuildManager : MonoBehaviour {
         else if(previousTower == canonPrefab)
         {
             currentImage = canonImage;
+        }
+        else if(previousTower == null)
+        {
+            return;
         }
         currentImage.color = red;
     }
@@ -155,6 +160,7 @@ public class BuildManager : MonoBehaviour {
 
         buildTimeRemaining = buildStartTime;
         InstantiateTower();
+        buildTimeCanvas.SetActive(false);
     }
 
     private void InstantiateTower()
@@ -180,6 +186,15 @@ public class BuildManager : MonoBehaviour {
             buildCanvasGroup.blocksRaycasts = false;
         }   
     }
+
+    public void UpdateBuildUI()
+    {
+        playerCoinsText.text = Managers.Player.coins.ToString();
+        ChangeEnableColor();
+        ChangeTowerBuildColor();
+    }
+
+    
 
     
 

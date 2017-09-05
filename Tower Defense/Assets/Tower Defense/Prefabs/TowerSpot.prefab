@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 225426463563953588}
   m_Layer: 8
   m_Name: Build Canvas
-  m_TagString: Untagged
+  m_TagString: BuildManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
