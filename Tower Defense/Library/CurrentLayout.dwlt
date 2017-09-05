@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 342}
+  m_MaxSize: {x: 12006, y: 8042}
   vertical: 0
-  controlID: 36
+  controlID: 23
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 298
     height: 587
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -114,15 +114,15 @@ MonoBehaviour:
     y: 587
     width: 1530
     height: 360
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1530
     height: 947
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 404, y: 342}
+  m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 37
+  controlID: 24
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1530
     height: 587
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 38
+  controlID: 25
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -284,17 +284,19 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 581
-    width: 1305
-    height: 279
+    y: 679
+    width: 1528
+    height: 339
   m_ViewPositions:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
+    m_KeySerializationHelper:
+    - {fileID: 1107382379882779286, guid: 60dccff9df1bdfb4f8ec083c56beaad0, type: 2}
+    m_ValueSerializationHelper:
+    - {x: 686.80005, y: 217.80005}
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 9ebbb1ef8e133d048880394b7204d4d7,
+  m_AnimatorController: {fileID: 9100000, guid: 60dccff9df1bdfb4f8ec083c56beaad0,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107118961215124196, guid: 9ebbb1ef8e133d048880394b7204d4d7,
+  - m_Target: {fileID: 1107382379882779286, guid: 60dccff9df1bdfb4f8ec083c56beaad0,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -345,19 +347,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Tower Defense/Sprites
+    - Assets/Tower Defense/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tower Defense/Sprites
+  - Assets/Tower Defense/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Cindy Ho\Documents\Tower Defense Project\Tower Defense
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 34}
-    m_SelectedIDs: b6270000
-    m_LastClickedID: 10166
-    m_ExpandedIDs: 000000008e27000094270000cc2700006a280000902900004a2a0000742a0000183100001a3100001c3100001e3100002031000000ca9a3bffffff7f
+    m_SelectedIDs: 662a0000
+    m_LastClickedID: 10854
+    m_ExpandedIDs: 000000008e27000094270000cc2700006e2800009c290000522a00007c2a0000203100002231000024310000263100002831000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -385,7 +387,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e27000094270000cc2700006a280000902900004a2a0000742a0000183100001a3100001c3100001e31000020310000
+    m_ExpandedIDs: 000000008e27000094270000cc2700006e2800009c290000522a00007c2a00002031000022310000243100002631000028310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -410,10 +412,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 1257f9ff
+    m_LastClickedInstanceID: -436462
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 5cc8feff94fb00000c2800005e8a0000
+    m_ExpandedInstanceIDs: 5cc8feff94fb00000c2800005e8a00006e3800007e3f0000b44b0000c25200006878000044960000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,23 +503,23 @@ MonoBehaviour:
     height: 566
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 48fbffff
-    m_LastClickedID: -1208
-    m_ExpandedIDs: 30fbffff32fbffff3efbffff48fbffff1afcffff00000000802c0000
+    m_SelectedIDs: 1257f9ff
+    m_LastClickedID: 0
+    m_ExpandedIDs: 42a5f8ff0aa6f8ff06d4f8ffaa10f9ff6c82f9ff7082f9ff8288f9ff9888f9ff9a88f9ffe251faff1656faff1a56faff1e56faff2656faff2a56faff2e56faff3656faff3a56faff4256faff4656faff4e56faff5256faff5656faff5a56faff6056faff8c56faff8690fbff4693fbff0497fbff0897fbff0c97fbff1497fbff1897fbff1c97fbff2497fbff2897fbff3097fbff3497fbff3c97fbff4097fbff4497fbff4897fbff4e97fbff7497fbff4a3bfdffbc41fdffc041fdffc441fdffcc41fdffd041fdffd441fdffdc41fdffe041fdffe841fdffec41fdfff441fdfff841fdfffc41fdff0042fdff0642fdff2c42fdff0467fdff208bfdff248bfdff288bfdff308bfdff348bfdff388bfdff408bfdff448bfdff4c8bfdff508bfdff588bfdff5c8bfdff608bfdff648bfdff6a8bfdff968bfdfff40cfeff8419feff8819feff8c19feff9419feff9819feff9c19feffa419feffa819feffb019feffb419feffbc19feffc019feffc419feffc819feffce19fefffa19feff3678feff2e7dfeff327dfeff367dfeff3e7dfeff427dfeff467dfeff4e7dfeff527dfeff5a7dfeff5e7dfeff667dfeff6a7dfeff6e7dfeff727dfeff787dfeff9e7dfeffc2b1feffc6b1feffcab1feffd2b1feffd6b1feffdab1feffe2b1feffe6b1feffeeb1fefff2b1fefffab1fefffeb1feff02b2feff06b2feff0cb2feff36b2feffc686ffffca86ffffce86ffffd686ffffda86ffffde86ffffe686ffffea86fffff286fffff686fffffe86ffff0287ffff0687ffff0a87ffff1087ffff3e87ffff0ae4ffff0ee4ffff12e4ffff1ae4ffff1ee4ffff22e4ffff2ae4ffff2ee4ffff36e4ffff3ae4ffff42e4ffff46e4ffff4ae4ffff4ee4ffff54e4ffff7ae4ffff1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: HealthBar Canvas
+      m_OriginalName: HealthBar Canvas
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -423784
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 4
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -553,14 +555,14 @@ MonoBehaviour:
     width: 1228
     height: 566
   m_SceneLighting: 1
-  lastFramingTime: 1107.1410905982136
+  lastFramingTime: 2448.34889124082
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -15.971677, y: 2.0493376, z: -1.0418289}
+    m_Target: {x: -10.6688175, y: 4.7015076, z: 4.68517}
     speed: 2
-    m_Value: {x: -15.971677, y: 2.0493376, z: -1.0418289}
+    m_Value: {x: -10.6688175, y: 4.7015076, z: 4.68517}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -583,13 +585,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.23600852, y: -0.3972991, z: 0.10650252, w: 0.8804037}
+    m_Target: {x: -0.15796062, y: 0.22390942, z: -0.036802925, w: -0.9610196}
     speed: 2
-    m_Value: {x: 0.23600852, y: -0.3972991, z: 0.10650252, w: 0.8804037}
+    m_Value: {x: -0.15796062, y: 0.22390942, z: -0.036802925, w: -0.9610196}
   m_Size:
-    m_Target: 4.1192226
+    m_Target: 1.156817
     speed: 2
-    m_Value: 4.1192226
+    m_Value: 1.156817
   m_Ortho:
     m_Target: 0
     speed: 2

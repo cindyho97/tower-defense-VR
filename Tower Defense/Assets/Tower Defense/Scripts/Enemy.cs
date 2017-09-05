@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour {
             // Move towards node
             transform.Translate(dir.normalized * distThisFrame, Space.World);
             Quaternion targetRot = Quaternion.LookRotation(dir); // Look in direction that enemy is moving
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * 2); // Smooth out rotation
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * 5); // Smooth out rotation
         }
     }
 
