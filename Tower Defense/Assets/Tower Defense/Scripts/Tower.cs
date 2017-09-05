@@ -41,7 +41,7 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
         foreach(Enemy enemy in enemies)
         {
             float distTowerEnemy = Vector3.Distance(enemy.transform.position, transform.position);
-            if(nearestEnemy == null || distTowerEnemy < distance)
+            if(nearestEnemy == null && enemy.isAlive|| distTowerEnemy < distance)
             {
                 nearestEnemy = enemy;
                 distance = distTowerEnemy; 
@@ -81,14 +81,16 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     
     private void ShootAt(Enemy nearestEnemy)
     {
-        // TODO: fire bullet from tip
-        GameObject bullet = Instantiate(bulletPrefab, bulletPosition.position, bulletPosition.rotation) as GameObject;
-        Bullet bulletScript = bullet.GetComponent<Bullet>();
-        bulletScript.target = nearestEnemy.transform;
-        bulletScript.damage = damage;
+        if(nearestEnemy.isAlive)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, bulletPosition.position, bulletPosition.rotation) as GameObject;
+            Bullet bulletScript = bullet.GetComponent<Bullet>();
+            bulletScript.target = nearestEnemy.transform;
+            bulletScript.damage = damage;
 
-        // Canon tower
-        bulletScript.radius = explosionRadius;
+            // Canon tower
+            bulletScript.radius = explosionRadius;
+        } 
     }
 
     // Click on tower

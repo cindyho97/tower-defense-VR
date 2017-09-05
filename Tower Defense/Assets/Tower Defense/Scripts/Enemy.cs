@@ -6,18 +6,22 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
     private int pathNodeIndex = 0;
     private Transform targetPathNode;
+    private Animator anim;
+    
     protected int health;
 
     public GameObject path;
     public float speed;
     public int startHealth;
     public int coinValue;
+    public bool isAlive = true;
     public Image healthBarImage;
 
     private void Start()
     {
         path = GameObject.Find("PathNodes");
         health = startHealth;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,7 +30,7 @@ public class Enemy : MonoBehaviour {
         {
             GetNextPathNode();
         }
-        if(targetPathNode != null)
+        if(targetPathNode != null && isAlive)
         {
             MoveTowardsNode();
         }
@@ -87,21 +91,23 @@ public class Enemy : MonoBehaviour {
         
         if(health <= 0)
         {
+            isAlive = false;
             StartCoroutine(Die());
         }
     }
 
     private IEnumerator Die()
-    { 
-        Managers.Player.UpdateCoins(coinValue);
+    {
         GameObject[] buildManagers = GameObject.FindGameObjectsWithTag("BuildManager");
         for(int i = 0; i < buildManagers.Length; i++)
         {
             buildManagers[i].GetComponent<BuildManager>().UpdateBuildUI();
         }
+
+        anim.SetBool("Die", true);
+        Managers.Player.UpdateCoins(coinValue);
         Managers.EnemyMan.enemyCount--;
-        // Start death animation
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 

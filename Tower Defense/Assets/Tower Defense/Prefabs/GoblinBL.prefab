@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 114553369067584430}
   - component: {fileID: 114816976137344588}
   m_Layer: 5
-  m_Name: HealthBar Canvas (1)
+  m_Name: HealthBar Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,6 +772,7 @@ MonoBehaviour:
   speed: 2
   startHealth: 10
   coinValue: 3
+  isAlive: 1
   healthBarImage: {fileID: 114446767875630454}
 --- !u!114 &114816976137344588
 MonoBehaviour:
