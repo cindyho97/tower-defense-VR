@@ -3101,7 +3101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveComps:
-  - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 7
   timeBeforeWave: 10
@@ -3146,7 +3146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveComps:
-  - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 5
   timeBeforeWave: 60
@@ -5853,7 +5853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveComps:
-  - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 3
   timeBeforeWave: 10
@@ -8003,7 +8003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveComps:
-  - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 2
   timeBeforeWave: 10
