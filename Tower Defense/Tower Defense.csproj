@@ -213,6 +213,7 @@
     <Compile Include="Assets\Tower Defense\Scripts\Managers.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\ManagerStatus.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\Messenger.cs" />
+    <Compile Include="Assets\Tower Defense\Scripts\ObjectOutline.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\Orc.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\PathNode.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\PlayerManager.cs" />

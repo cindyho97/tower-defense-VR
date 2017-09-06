@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4151198436556594}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Toes-R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4594722231673742}
   - component: {fileID: 137357552363193550}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4450954212072444}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PoleTarget-L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4374139008029724}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933565108463518}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hand-R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4243852011971770}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4492204785444368}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Toes-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4703900681848230}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: UpperArm-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 114588304213023950}
   - component: {fileID: 114028029054192260}
   - component: {fileID: 225084008712978690}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthBar Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4423475463536282}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PoleTarget-R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864424547576900}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: UpperArm-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4148630639344124}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PoleTarget-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4853608090412654}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4428153271628732}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4341437944449268}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hand-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 224754396422446714}
   - component: {fileID: 222905196044033282}
   - component: {fileID: 114697212655589838}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4394225422454674}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4641349246170012}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: UpperLeg-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4232300363190520}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LegIK-L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4043498028957156}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Toes-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4596779343165286}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PoleTarget-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4948482072584986}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowerLeg-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4379916537309694}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hand-L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039087770235636}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowerLeg-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 135822508937473452}
   - component: {fileID: 54117128809385984}
   - component: {fileID: 114048170543399422}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4658696163603640}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4818296694561246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowerArm-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 224694267070259076}
   - component: {fileID: 222023162065012532}
   - component: {fileID: 114372826286110318}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: BGColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4668041318022780}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hand-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4414367897799112}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LegIK-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4486047200167774}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowerArm-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4340832634857956}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LegIK-R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4557385983548898}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LegIK-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4320536999230598}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Toes-L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4519711848645946}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: UpperLeg-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4891828754443984}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4931951770764634}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}

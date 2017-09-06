@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 33901473247219886}
   - component: {fileID: 23187557670345872}
   - component: {fileID: 64908509312104504}
-  m_Layer: 0
+  - component: {fileID: 114494816719636572}
+  m_Layer: 12
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +40,7 @@ GameObject:
   - component: {fileID: 4198700486895324}
   - component: {fileID: 33915833276395190}
   - component: {fileID: 23852628024026106}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4670991766745236}
   - component: {fileID: 114663919444410610}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArrowTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4032536528953248}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,6 +225,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 348130852b640884fb1d7b7496917add, type: 3}
+--- !u!114 &114494816719636572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240514697815040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d244dd5a47bcc48b807a005ac0312b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 5eeda443337033e4d9d4291ffe824397, type: 2}
 --- !u!114 &114663919444410610
 MonoBehaviour:
   m_ObjectHideFlags: 1

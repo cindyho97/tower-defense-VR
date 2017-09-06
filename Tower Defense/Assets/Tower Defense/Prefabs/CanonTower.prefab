@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4812454917586602}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4079660609321140}
   - component: {fileID: 114346584883357980}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CanonTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4060649148673120}
   - component: {fileID: 33042753147272992}
   - component: {fileID: 23613067368044686}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,8 @@ GameObject:
   - component: {fileID: 33403164185853340}
   - component: {fileID: 23490454769341930}
   - component: {fileID: 64392702463722644}
-  m_Layer: 0
+  - component: {fileID: 114955621668941028}
+  m_Layer: 12
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,3 +243,15 @@ MonoBehaviour:
   cost: 125
   damage: 3
   explosionRadius: 3
+--- !u!114 &114955621668941028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663431878908240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d244dd5a47bcc48b807a005ac0312b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 5eeda443337033e4d9d4291ffe824397, type: 2}
