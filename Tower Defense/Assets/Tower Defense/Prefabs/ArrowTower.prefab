@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23187557670345872}
   - component: {fileID: 64908509312104504}
   - component: {fileID: 114494816719636572}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4198700486895324}
   - component: {fileID: 33915833276395190}
   - component: {fileID: 23852628024026106}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4670991766745236}
   - component: {fileID: 114663919444410610}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: ArrowTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4032536528953248}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}

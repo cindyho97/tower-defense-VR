@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4670171527568918}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: CameraPos1
   m_TagString: CameraStartPosition
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 64579703494599268}
   - component: {fileID: 114327785877905284}
   - component: {fileID: 114145258003567304}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: WatchTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}

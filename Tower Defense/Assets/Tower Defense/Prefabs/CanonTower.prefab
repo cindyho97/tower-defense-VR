@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4812454917586602}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4079660609321140}
   - component: {fileID: 114346584883357980}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: CanonTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4060649148673120}
   - component: {fileID: 33042753147272992}
   - component: {fileID: 23613067368044686}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 23490454769341930}
   - component: {fileID: 64392702463722644}
   - component: {fileID: 114955621668941028}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23531619590517170}
   - component: {fileID: 64866244396304748}
   - component: {fileID: 114142414814320676}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4409405281684346}
   - component: {fileID: 33594059623947964}
   - component: {fileID: 23330846480576210}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4121727021962802}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4713687586468116}
   - component: {fileID: 114355284396862258}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: MagicTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
