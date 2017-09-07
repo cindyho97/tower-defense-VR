@@ -53,8 +53,11 @@ public class Bullet : MonoBehaviour {
             Debug.Log(gameObject.name);
             if(gameObject.name.Contains("MagicBall"))
             {
-                Debug.Log("verder");
                 FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.magicBall);
+            }
+            else if (gameObject.name.Contains("Arrow"))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.arrowDamage);
             }
             target.GetComponent<Enemy>().TakeDamage(damage);
         }

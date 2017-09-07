@@ -434,6 +434,8 @@ MonoBehaviour:
   canonExplosion: event:/CanonExplosion
   spawnEnemy: event:/SpawnEnemy
   buildTimeBar: event:/BuildTimeBar
+  magicBall: event:/MagicBall
+  arrowDamage: event:/ArrowDamage
 --- !u!1 &121667332
 GameObject:
   m_ObjectHideFlags: 0

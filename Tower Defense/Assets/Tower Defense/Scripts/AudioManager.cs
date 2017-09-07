@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour, IGameManager{
     public string buildTimeBar;
     [FMODUnity.EventRef]
     public string magicBall;
+    [FMODUnity.EventRef]
+    public string arrowDamage;
     
 
     public void Startup()
