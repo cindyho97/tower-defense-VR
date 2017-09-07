@@ -36,19 +36,30 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
         Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
         Enemy nearestEnemy = null;
         float distance = Mathf.Infinity; // Highest distance at beginning of comparison
+        List<Enemy> enemiesAlive = new List<Enemy>();
 
-
-        foreach(Enemy enemy in enemies)
+        foreach (Enemy enemy in enemies)
         {
-            float distTowerEnemy = Vector3.Distance(enemy.transform.position, transform.position);
-            if(nearestEnemy == null && enemy.isAlive|| distTowerEnemy < distance)
+            // Only keep living enemies
+            if (enemy.isAlive)
             {
-                nearestEnemy = enemy;
-                distance = distTowerEnemy; 
-            }
+                enemiesAlive.Add(enemy);
+            } 
         }
 
-        if(nearestEnemy == null)
+        foreach(Enemy enemy in enemiesAlive)
+        {
+            // Compare distance and set nearest enemy
+            float distTowerEnemy = Vector3.Distance(enemy.transform.position, transform.position);
+            if (nearestEnemy == null || distTowerEnemy < distance)
+            {
+                nearestEnemy = enemy;
+                distance = distTowerEnemy;
+            }
+        }
+        enemiesAlive.Clear();
+
+        if (nearestEnemy == null)
         {
             // No enemies left?
             return;
@@ -90,7 +101,7 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
 
             // Canon tower
             bulletScript.radius = explosionRadius;
-        } 
+        }
     }
 
     // Click on tower

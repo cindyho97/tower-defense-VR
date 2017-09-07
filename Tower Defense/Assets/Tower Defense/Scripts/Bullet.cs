@@ -50,7 +50,6 @@ public class Bullet : MonoBehaviour {
 
         if (radius == 0)
         {
-            Debug.Log(gameObject.name);
             if(gameObject.name.Contains("MagicBall"))
             {
                 FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.magicBall);
