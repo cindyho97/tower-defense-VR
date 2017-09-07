@@ -151,6 +151,7 @@ public class BuildManager : MonoBehaviour {
 
     private IEnumerator WaitForBuiltTime()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.buildTimeBar);
         buildTimeCanvas.SetActive(true);
         buildingNow = true;
 

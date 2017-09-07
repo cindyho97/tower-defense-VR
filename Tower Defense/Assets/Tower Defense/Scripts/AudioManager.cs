@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour, IGameManager{
     public string canonExplosion;
     [FMODUnity.EventRef]
     public string spawnEnemy;
+    [FMODUnity.EventRef]
+    public string buildTimeBar;
     
 
     public void Startup()

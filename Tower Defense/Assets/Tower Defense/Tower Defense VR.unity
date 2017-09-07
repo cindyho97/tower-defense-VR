@@ -433,6 +433,7 @@ MonoBehaviour:
   buildUI: event:/BuildUI
   canonExplosion: event:/CanonExplosion
   spawnEnemy: event:/SpawnEnemy
+  buildTimeBar: event:/BuildTimeBar
 --- !u!1 &121667332
 GameObject:
   m_ObjectHideFlags: 0
