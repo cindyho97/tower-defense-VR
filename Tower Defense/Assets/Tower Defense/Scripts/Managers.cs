@@ -7,6 +7,7 @@ public class Managers : MonoBehaviour {
 
 	public static PlayerManager Player { get; private set; }
     public static EnemyManager EnemyMan { get; private set; }
+    public static AudioManager AudioMan { get; private set; }
 
     private List<IGameManager> startSequence;
 
@@ -14,10 +15,12 @@ public class Managers : MonoBehaviour {
     {
         Player = GetComponent<PlayerManager>();
         EnemyMan = GetComponent<EnemyManager>();
+        AudioMan = GetComponent<AudioManager>();
 
         startSequence = new List<IGameManager>();
         startSequence.Add(Player);
         startSequence.Add(EnemyMan);
+        startSequence.Add(AudioMan);
 
         StartCoroutine(StartupManagers());
     }

@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Tower Defense.Plugins.csproj">
+      <Project>{2C4B1A8D-BB95-F4DE-0289-1C18B2052196}</Project>
+      <Name>Tower Defense.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\GVRDemo\GVRDemoManager.cs" />
@@ -126,6 +132,8 @@
     <Compile Include="Assets\GoogleVR\Legacy\Scripts\GvrController.cs" />
     <Compile Include="Assets\GoogleVR\Legacy\Scripts\GvrControllerVisualManager.cs" />
     <Compile Include="Assets\GoogleVR\Legacy\Scripts\GvrPointerManager.cs" />
+    <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
+    <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Audio\GvrAudio.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Audio\GvrAudioListener.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Audio\GvrAudioRoom.cs" />
@@ -198,6 +206,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\ArrowTower.cs" />
+    <Compile Include="Assets\Tower Defense\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\Bullet.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\BulletExplosion.cs" />
@@ -240,6 +249,7 @@
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
     <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
+    <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
     <None Include="Assets\Tower Defense\Materials\Outline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

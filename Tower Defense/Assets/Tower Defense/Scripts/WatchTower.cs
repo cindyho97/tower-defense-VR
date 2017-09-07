@@ -41,9 +41,11 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.teleport);
         ObjectOutline.currentObject = gameObject;
 
         player.transform.position = cameraPosition.position;
+        
         
         if (gameObject.name.Contains("WatchSpot"))
         {

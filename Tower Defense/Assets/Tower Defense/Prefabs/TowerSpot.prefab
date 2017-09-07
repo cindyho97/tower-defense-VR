@@ -1038,6 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10cf2db9d133324f8fc948464ba648c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildUISound: event:/BuildUI
   buildCanvas: {fileID: 1210271654189516}
 --- !u!114 &114934088956160156
 MonoBehaviour:

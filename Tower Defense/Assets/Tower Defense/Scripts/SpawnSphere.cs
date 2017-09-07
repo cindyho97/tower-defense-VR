@@ -1,23 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SpawnSphere : MonoBehaviour {
+public class SpawnSphere : MonoBehaviour, IPointerClickHandler{
 
     public EnemySpawner enemySpawner;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void OnSpawnSphere()
+    public void OnPointerClick(PointerEventData eventData)
     {
+        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.spawnEnemy);
         enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawners").transform.GetChild(0).GetComponent<EnemySpawner>();
         enemySpawner.timeBeforeWave = 0;
         enemySpawner.timeRespawnBar = 0;

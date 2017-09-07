@@ -130,8 +130,17 @@
       <Project>{9B62F679-4818-BC0E-B835-F0DB59B1B44D}</Project>
       <Name>Tower Defense</Name>
     </ProjectReference>
+    <ProjectReference Include="Tower Defense.Plugins.csproj">
+      <Project>{2C4B1A8D-BB95-F4DE-0289-1C18B2052196}</Project>
+      <Name>Tower Defense.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="Tower Defense.Editor.Plugins.csproj">
+      <Project>{361E72EF-3352-2694-C40B-51F9E9ADA4C7}</Project>
+      <Name>Tower Defense.Editor.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\FMODMigrationUtil.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Editor\DemoInputManagerEditor.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Editor\PermissionsDemoBuildEditor.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\ScrollingUIDemo\Editor\PagedScrollbarEditor.cs" />
@@ -142,6 +151,7 @@
     <Compile Include="Assets\GoogleVR\Editor\Controller\GvrControllerVisualEditor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\Controller\GvrTooltipEditor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\EventSystem\GvrPointerScrollInputEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\FmodGvrAudioRoomEditor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\GvrBuildProcessor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\GvrEditorEmulatorEditor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\GvrEditorSettings.cs" />
@@ -165,6 +175,7 @@
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
     <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
+    <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
     <None Include="Assets\Tower Defense\Materials\Outline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+    //[FMODUnity.EventRef]
+    //public string bulletSound;
     public GameObject explosionPrefab;
     public Transform target;
     public float speed = 10f;
@@ -50,9 +52,9 @@ public class Bullet : MonoBehaviour {
         {
             target.GetComponent<Enemy>().TakeDamage(damage);
         }
-        else // Bullet with area explosion effect
+        else // Bullet from canon (area explosion)
         {
-            
+            FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.canonExplosion);
             Collider[] cols = Physics.OverlapSphere(transform.position, radius); // Return array of colliders that bullet collides with
 
             foreach(Collider collider in cols)
