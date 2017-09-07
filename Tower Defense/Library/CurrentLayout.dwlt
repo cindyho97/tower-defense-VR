@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,8 +91,8 @@ MonoBehaviour:
     y: 0
     width: 298
     height: 587
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -146,7 +146,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -435,19 +435,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Tower Defense/Prefabs
+    - Assets/Tower Defense/Textures
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tower Defense/Prefabs
+  - Assets/Tower Defense/Textures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Cindy Ho\Documents\Tower Defense Project\Tower Defense
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 782a0000
-    m_LastClickedID: 10872
-    m_ExpandedIDs: 000000008e27000094270000cc270000762800008e2a00006e31000070310000723100007431000076310000c673000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 18}
+    m_SelectedIDs: 8c2a0000
+    m_LastClickedID: 10892
+    m_ExpandedIDs: 000000008e270000942700008c280000c4290000ae2a0000ba310000bc310000be310000c0310000c2310000c431000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e27000094270000cc27000076280000ae2900008e2a00006e31000070310000723100007431000076310000
+    m_ExpandedIDs: 000000008e27000094270000cc2700008c280000ae2a0000ba310000bc310000be310000c0310000c2310000c4310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,9 +591,9 @@ MonoBehaviour:
     height: 566
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5c290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 7ae0f9ff16e5f9ffe6f5f9ff7895fbff0c96fbffd4b8fbfffcbbfbff04bcfbff0cbcfbff14bcfbff1cbcfbff20bcfbff24bcfbff28bcfbff30bcfbff34bcfbff38bcfbff3cbcfbff44bcfbff48bcfbff4cbcfbff54bcfbff58bcfbff5cbcfbff64bcfbff68bcfbff6cbcfbff70bcfbff74bcfbff7abcfbffa0bcfbff22fbfcff24fbfcff6400fdffdc08fdff149bfeffb09ffeffb89ffeffc09ffeffc89ffeffd09ffeffd49ffeffd89ffeffdc9ffeffe49ffeffe89ffeffec9ffefff09ffefff89ffefffc9ffeff00a0feff08a0feff0ca0feff10a0feff18a0feff1ca0feff20a0feff24a0feff28a0feff2ea0feff54a0feffeeafffff2cb6ffff30b6ffff34b6ffff3cb6ffff40b6ffff44b6ffff4cb6ffff50b6ffff58b6ffff5cb6ffff64b6ffff68b6ffff6cb6ffff70b6ffff76b6ffff9cb6ffff1afcffff00000000a6470000909300001095000080950000
+    m_SelectedIDs: 8eb40000
+    m_LastClickedID: 46222
+    m_ExpandedIDs: d656efff0026f0ff30aaf1ff52fbf1fff015f2ffac27f2ff1e6ff2ffc4dbf2ff1ec8f7ffbec8f7ffc2c9f7ff62caf7fff4caf7ff08cbf7ffc8cbf7ffe8cbf7ffa29ff8ff4899faff5c99faff7099faff8499faffe845fbff8e23fcff0cfaffff1afcffff00000000622c00007ca80000aab60000dab60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -643,14 +643,14 @@ MonoBehaviour:
     width: 1228
     height: 566
   m_SceneLighting: 1
-  lastFramingTime: 2448.34889124082
+  lastFramingTime: 17591.846451935067
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 32.80086, y: 6.0040717, z: 3.9995718}
+    m_Target: {x: 4.440207, y: 0.9266696, z: 0.5969181}
     speed: 2
-    m_Value: {x: 32.80086, y: 6.0040717, z: 3.9995718}
+    m_Value: {x: 4.440207, y: 0.9266696, z: 0.5969181}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -673,13 +673,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.00618261, y: -0.64478993, z: -0.005215962, w: -0.76431704}
+    m_Target: {x: -0.15033935, y: 0.009520846, z: -0.0014481571, w: -0.9885876}
     speed: 2
-    m_Value: {x: 0.00618261, y: -0.64478993, z: -0.005215962, w: -0.76431704}
+    m_Value: {x: -0.15033935, y: 0.009520846, z: -0.0014481571, w: -0.9885876}
   m_Size:
-    m_Target: 44.6878
+    m_Target: 24.164045
     speed: 2
-    m_Value: 44.6878
+    m_Value: 24.164045
   m_Ortho:
     m_Target: 0
     speed: 2
