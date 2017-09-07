@@ -22,9 +22,10 @@ MonoBehaviour:
   - {fileID: 114489635980996410}
   - {fileID: 114325792489073966}
   - {fileID: 114578966780073458}
+  - {fileID: 114482546313741542}
   MasterBankRef: {fileID: 114319320028547530}
   StringsBankRef: {fileID: 114707151779802512}
-  stringsBankWriteTime: 636404051162967157
+  stringsBankWriteTime: 636404063588007257
   cacheVersion: 2
 --- !u!114 &114317092412194304
 MonoBehaviour:
@@ -60,11 +61,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.bank
-  lastModified: 636404051162907005
+  lastModified: 636404063587982558
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 187584
+    Value: 182272
   Exists: 1
 --- !u!114 &114325792489073966
 MonoBehaviour:
@@ -128,6 +129,27 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &114482546313741542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/CoinDrop
+  guid: a0da14c9984e874d9f0432df8e9c7021
+  Banks:
+  - {fileID: 114319320028547530}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114489635980996410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,11 +205,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636404051162967157
+  lastModified: 636404063588007257
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 952
+    Value: 1002
   Exists: 1
 --- !u!114 &114948042162192172
 MonoBehaviour:

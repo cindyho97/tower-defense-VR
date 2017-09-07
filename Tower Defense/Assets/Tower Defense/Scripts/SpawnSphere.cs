@@ -9,7 +9,6 @@ public class SpawnSphere : MonoBehaviour, IPointerClickHandler{
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.spawnEnemy);
         enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawners").transform.GetChild(0).GetComponent<EnemySpawner>();
         enemySpawner.timeBeforeWave = 0;
         enemySpawner.timeRespawnBar = 0;

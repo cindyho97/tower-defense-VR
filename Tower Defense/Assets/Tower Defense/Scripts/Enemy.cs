@@ -105,6 +105,7 @@ public class Enemy : MonoBehaviour {
             buildManagers[i].GetComponent<BuildManager>().UpdateBuildUI();
         }
 
+        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.coinDrop);
         anim.SetBool("Die", true);
         Managers.Player.UpdateCoins(coinValue);
         Managers.EnemyMan.enemyCount--;

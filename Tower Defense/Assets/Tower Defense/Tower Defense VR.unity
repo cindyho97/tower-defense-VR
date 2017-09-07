@@ -436,6 +436,7 @@ MonoBehaviour:
   buildTimeBar: event:/BuildTimeBar
   magicBall: event:/MagicBall
   arrowDamage: event:/ArrowDamage
+  coinDrop: event:/CoinDrop
 --- !u!1 &121667332
 GameObject:
   m_ObjectHideFlags: 0

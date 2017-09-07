@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour, IGameManager{
     public string magicBall;
     [FMODUnity.EventRef]
     public string arrowDamage;
+    [FMODUnity.EventRef]
+    public string coinDrop;
     
 
     public void Startup()

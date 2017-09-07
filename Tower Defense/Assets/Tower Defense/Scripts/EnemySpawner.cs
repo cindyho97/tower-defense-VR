@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour {
     private bool enemySpawned = false;
     private Image respawnTimerBar;
     private float spawnCDBetweenEnemies = 1f;
+    private bool soundPlayed = false;
 
     [System.NonSerialized]
     public bool wavesCompleted = false;
@@ -48,6 +49,7 @@ public class EnemySpawner : MonoBehaviour {
             enemySpawned = false;
             timeBeforeWave = spawnCDBetweenEnemies;
 
+            
             SpawnEnemy();
             GetNextWave();
         }
@@ -55,8 +57,13 @@ public class EnemySpawner : MonoBehaviour {
 
     private void SpawnEnemy()
     {
-        // Go through wave comps until we find something to spawn
+        if (!soundPlayed)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.spawnEnemy);
+        }
+        soundPlayed = true;
 
+        // Go through wave comps until we find something to spawn
         foreach (WaveComponent waveComp in waveComps)
         {
             if (waveComp.spawned < waveComp.nrOfEnemies)
@@ -73,8 +80,10 @@ public class EnemySpawner : MonoBehaviour {
 
     private void GetNextWave()
     {
+        
         if (enemySpawned == false)
         {
+            soundPlayed = false;
             // Wave completed
             Managers.EnemyMan.UpdateNrWaves();
             if (transform.parent.childCount > 1)
