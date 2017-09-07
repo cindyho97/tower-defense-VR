@@ -50,6 +50,12 @@ public class Bullet : MonoBehaviour {
 
         if (radius == 0)
         {
+            Debug.Log(gameObject.name);
+            if(gameObject.name.Contains("MagicBall"))
+            {
+                Debug.Log("verder");
+                FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.magicBall);
+            }
             target.GetComponent<Enemy>().TakeDamage(damage);
         }
         else // Bullet from canon (area explosion)
