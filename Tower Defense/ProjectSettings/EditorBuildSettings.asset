@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Tower Defense/Tower Defense VR.unity
+    guid: 90d33468aeca7eb408053e9b52f239fb
