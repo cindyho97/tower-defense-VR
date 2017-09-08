@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   speed: 1.5
-  startHealth: 20
+  startHealth: 23
   coinValue: 9
   isAlive: 1
   healthBarImage: {fileID: 114697212655589838}

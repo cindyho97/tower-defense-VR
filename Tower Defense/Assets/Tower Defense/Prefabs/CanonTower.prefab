@@ -239,10 +239,10 @@ MonoBehaviour:
   bulletPosition: {fileID: 4812454917586602}
   bulletPrefab: {fileID: 1765148515708772, guid: e357d154e6b978c4c9f37b29bfb1bf31,
     type: 2}
-  range: 11
+  range: 9
   cost: 125
   damage: 3
-  explosionRadius: 3
+  explosionRadius: 2
 --- !u!114 &114955621668941028
 MonoBehaviour:
   m_ObjectHideFlags: 1
