@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1259122219521726
 GameObject:
   m_ObjectHideFlags: 1
@@ -1038,8 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10cf2db9d133324f8fc948464ba648c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildUISound: event:/BuildUI
-  buildCanvas: {fileID: 1210271654189516}
+  buildCanvas: {fileID: 114673951008188586}
 --- !u!114 &114934088956160156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1509,7 +1508,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210271654189516}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

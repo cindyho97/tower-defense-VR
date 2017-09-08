@@ -60,7 +60,6 @@ public class Bullet : MonoBehaviour {
                 sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.magicBall);
                 sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
                 sfxInstance.start();
-                //FMODUnity.RuntimeManager.PlayOneShotAttached(Managers.AudioMan.magicBall,gameObject);
             }
             else if (gameObject.name.Contains("Arrow"))
             {
@@ -68,7 +67,6 @@ public class Bullet : MonoBehaviour {
                 sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.arrowDamage);
                 sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
                 sfxInstance.start();
-                //FMODUnity.RuntimeManager.PlayOneShotAttached(Managers.AudioMan.arrowDamage,gameObject);
             }
             target.GetComponent<Enemy>().TakeDamage(damage);
         }
@@ -77,7 +75,7 @@ public class Bullet : MonoBehaviour {
             sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.canonExplosion);
             sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             sfxInstance.start();
-            //FMODUnity.RuntimeManager.PlayOneShotAttached(Managers.AudioMan.canonExplosion,gameObject);
+
             Collider[] cols = Physics.OverlapSphere(transform.position, radius); // Return array of colliders that bullet collides with
 
             foreach(Collider collider in cols)

@@ -252,6 +252,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1596971481530906, guid: fee8d74788d93ac48b31ebe5e5f18a94,
     type: 2}
   range: 11
-  cost: 100
+  cost: 150
   damage: 5
   explosionRadius: 0

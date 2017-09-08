@@ -12,8 +12,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
 	
     public void Startup()
     {
-        UpdateData(20, 20, 256);
-
+        UpdateData(20, 20, 400);
         status = ManagerStatus.Started;
     }
 
@@ -28,7 +27,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
     {
         health += damage;
 
-        if(health < 0)
+        if(health <= 0)
         {
             health = 0;
         }
@@ -55,6 +54,6 @@ public class PlayerManager : MonoBehaviour,IGameManager {
 
     public void Respawn()
     {
-        UpdateData(100, 100, 50);
+        UpdateData(20, 20, 400);
     }
 }

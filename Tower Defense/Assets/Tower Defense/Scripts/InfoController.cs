@@ -11,15 +11,23 @@ public class InfoController : MonoBehaviour {
     public Text coinsText;
     public Text waveText;
 
+    private BuildManager[] buildCanvasses;
+
 
     private void Awake()
-    {
+    { 
         OnCoinsUpdated();
+        
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
         Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
         Messenger.AddListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
+    }
+
+    private void Start()
+    {
+        FindBuildCanvasses();
     }
 
     private void OnDestroy()
@@ -39,6 +47,14 @@ public class InfoController : MonoBehaviour {
     private void OnCoinsUpdated()
     {
         coinsText.text = Managers.Player.coins.ToString();
+        if(buildCanvasses != null)
+        {
+            foreach (BuildManager buildCanvas in buildCanvasses)
+            {
+                buildCanvas.UpdateBuildUI();
+            }
+        }
+        
     }
 
     private void OnWaveUpdated()
@@ -73,5 +89,15 @@ public class InfoController : MonoBehaviour {
         Managers.Player.Respawn();
         // Manager.Level.RestartLevel
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void FindBuildCanvasses()
+    {
+        GameObject[] buildCanvasObjs = GameObject.FindGameObjectsWithTag("BuildManager");
+
+        for (int i = 0; i < buildCanvasObjs.Length; i++)
+        {
+            buildCanvasses[i] = buildCanvasObjs[i].GetComponent<BuildManager>();
+        }
     }
 }
