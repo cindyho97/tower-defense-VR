@@ -2249,6 +2249,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560925472}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &577788575 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 555767533, guid: 34c21f523e72f45509a4e37ed0293c3b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1722609987}
 --- !u!1 &582285937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,11 +4546,11 @@ Prefab:
     - target: {fileID: 11499020, guid: 8524bbe5e592a42dc9251484a73c9c7f, type: 2}
       propertyPath: controllerPointer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 577788575}
     - target: {fileID: 11499020, guid: 8524bbe5e592a42dc9251484a73c9c7f, type: 2}
       propertyPath: reticlePointer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1788845844}
     - target: {fileID: 162814, guid: 8524bbe5e592a42dc9251484a73c9c7f, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -6454,7 +6459,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 555767533, guid: 34c21f523e72f45509a4e37ed0293c3b, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013128025656, guid: 34c21f523e72f45509a4e37ed0293c3b,
         type: 2}
@@ -6576,6 +6581,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1788845844 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 171526, guid: 60270cf52a5e94998a5a335989159738, type: 2}
+  m_PrefabInternal: {fileID: 1485405851}
 --- !u!1 &1801703457
 GameObject:
   m_ObjectHideFlags: 0
