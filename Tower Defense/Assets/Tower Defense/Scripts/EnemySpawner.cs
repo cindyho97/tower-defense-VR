@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour {
     private Image respawnTimerBar;
     private float spawnCDBetweenEnemies = 1f;
     private bool soundPlayed = false;
+    FMOD.Studio.EventInstance sfxInstance;
 
     [System.NonSerialized]
     public bool wavesCompleted = false;
@@ -59,7 +60,9 @@ public class EnemySpawner : MonoBehaviour {
     {
         if (!soundPlayed)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.spawnEnemy);
+            sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.spawnEnemy);
+            sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+            sfxInstance.start();
         }
         soundPlayed = true;
 
@@ -98,5 +101,9 @@ public class EnemySpawner : MonoBehaviour {
 
             Destroy(gameObject);
         }
+    }
+    private void OnDestroy()
+    {
+        sfxInstance.release();
     }
 }

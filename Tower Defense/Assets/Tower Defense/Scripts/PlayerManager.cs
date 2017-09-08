@@ -45,7 +45,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
     {
         coins += value;
 
-        if(coins < 0)
+        if (coins < 0)
         {
             coins = 0;
         }

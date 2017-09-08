@@ -57,6 +57,7 @@ MonoBehaviour:
     Value: 256
   - Platform: 2
     Value: 32
-  Plugins: []
+  Plugins:
+  - gvraudio
   MasterBank: Master Bank
   Banks: []

@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour {
     // Canon tower
     public float radius = 0;
 
+    FMOD.Studio.EventInstance sfxInstance;
+
     private void Update()
     {
         if(target != null)
@@ -48,21 +50,34 @@ public class Bullet : MonoBehaviour {
         GameObject explosion = Instantiate(explosionPrefab, target.position, target.rotation) as GameObject;
         explosion.GetComponent<BulletExplosion>().DestroyExplosion();
 
+        
+        
+
         if (radius == 0)
         {
             if(gameObject.name.Contains("MagicBall"))
             {
-                FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.magicBall);
+                sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.magicBall);
+                sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                sfxInstance.start();
+                //FMODUnity.RuntimeManager.PlayOneShotAttached(Managers.AudioMan.magicBall,gameObject);
             }
             else if (gameObject.name.Contains("Arrow"))
             {
-                FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.arrowDamage);
+                
+                sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.arrowDamage);
+                sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                sfxInstance.start();
+                //FMODUnity.RuntimeManager.PlayOneShotAttached(Managers.AudioMan.arrowDamage,gameObject);
             }
             target.GetComponent<Enemy>().TakeDamage(damage);
         }
         else // Bullet from canon (area explosion)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.canonExplosion);
+            sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.canonExplosion);
+            sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+            sfxInstance.start();
+            //FMODUnity.RuntimeManager.PlayOneShotAttached(Managers.AudioMan.canonExplosion,gameObject);
             Collider[] cols = Physics.OverlapSphere(transform.position, radius); // Return array of colliders that bullet collides with
 
             foreach(Collider collider in cols)
@@ -86,5 +101,10 @@ public class Bullet : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
+    }
+
+    private void OnDestroy()
+    {
+        sfxInstance.release();
     }
 }

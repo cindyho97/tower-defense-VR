@@ -10,6 +10,8 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
     private float fireCooldown = 1.5f;
     private float fireCooldownLeft = 0f;
 
+    FMOD.Studio.EventInstance sfxInstance;
+
     public Transform bulletPosition;
     public GameObject bulletPrefab; 
 
@@ -23,6 +25,9 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
 
 	// Use this for initialization
 	void Start () {
+        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.towerBuild);
+        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        sfxInstance.start();
         weaponTransform = transform.Find("Weapon");
 	}
 	
@@ -119,5 +124,10 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
             buildCanvas.SetBuildCanvas(true);
             buildCanvas.UpdateBuildUI();
         }
+    }
+
+    private void OnDestroy()
+    {
+        sfxInstance.release();
     }
 }

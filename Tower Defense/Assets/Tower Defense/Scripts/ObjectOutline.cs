@@ -21,11 +21,6 @@ public class ObjectOutline : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void SetGazedAt(bool gazedAt)
     {
         GetComponent<MeshRenderer>().material = gazedAt ? outlineWithTexture : currentMaterial;
-
-        if (gameObject.name.Contains("BuildSign"))
-        {
-            GetComponentInChildren<MeshRenderer>().material = gazedAt ? outlineWithTexture : currentMaterial;
-        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -43,5 +38,4 @@ public class ObjectOutline : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         SetGazedAt(false);
     }
-
 }

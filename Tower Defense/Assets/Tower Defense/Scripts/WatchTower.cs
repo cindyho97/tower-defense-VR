@@ -12,6 +12,8 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
 
     private Transform cameraPosition;
 
+    FMOD.Studio.EventInstance sfxInstance;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,17 +43,20 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.teleport);
+        
         ObjectOutline.currentObject = gameObject;
-
         player.transform.position = cameraPosition.position;
+
+        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.teleport);
+        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(player)); // Set position of sound source
+        sfxInstance.start();
         
-        
+
         if (gameObject.name.Contains("WatchSpot"))
         {
             playerAtWatchSpot = true;
             groundSymbol.SetActive(false);
         }
     }
-    
+
 }

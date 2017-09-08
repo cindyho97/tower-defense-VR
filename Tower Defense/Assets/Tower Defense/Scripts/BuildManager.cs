@@ -41,6 +41,8 @@ public class BuildManager : MonoBehaviour {
     private float buildTimeRemaining;
     private int buildStartTime = 3;
 
+    FMOD.Studio.EventInstance sfxInstance;
+
     private void Start()
     {
         arrowCost = arrowPrefab.GetComponent<Tower>().cost;
@@ -151,7 +153,10 @@ public class BuildManager : MonoBehaviour {
 
     private IEnumerator WaitForBuiltTime()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.buildTimeBar);
+        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.buildTimeBar);
+        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        sfxInstance.start();
+
         buildTimeCanvas.SetActive(true);
         buildingNow = true;
 

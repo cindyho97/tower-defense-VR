@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class TowerSpot : MonoBehaviour {
 
-    //[FMODUnity.EventRef]
-    //public string buildUISound;
     public GameObject buildCanvas;
+    FMOD.Studio.EventInstance sfxInstance;
 
     public void OnTowerSpotSelect()
     {
-        if(buildCanvas.activeSelf == true)
+        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.buildUI);
+        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        
+        if (buildCanvas.activeSelf == true)
         {
             buildCanvas.SetActive(false);
-            FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.buildUI);
+            sfxInstance.start();
         }
         else
         {
             buildCanvas.SetActive(true);
-            FMODUnity.RuntimeManager.PlayOneShot(Managers.AudioMan.buildUI);
+            sfxInstance.start();
         }
     }
 }
