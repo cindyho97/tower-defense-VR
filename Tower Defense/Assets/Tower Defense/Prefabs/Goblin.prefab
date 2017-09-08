@@ -751,7 +751,7 @@ MonoBehaviour:
   path: {fileID: 0}
   speed: 2
   startHealth: 15
-  coinValue: 3
+  coinValue: 10
   isAlive: 1
   healthBarImage: {fileID: 114633029571535134}
 --- !u!114 &114425437390220840

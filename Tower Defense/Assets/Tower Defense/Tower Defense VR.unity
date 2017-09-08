@@ -187,19 +187,28 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 4
+    nrOfEnemies: 8
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 3
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
+    nrOfEnemies: 10
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
+      type: 2}
+    nrOfEnemies: 7
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
+      type: 2}
     nrOfEnemies: 6
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 4
+    nrOfEnemies: 10
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 4
+    nrOfEnemies: 10
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
+      type: 2}
+    nrOfEnemies: 15
   timeBeforeWave: 30
 --- !u!1 &75314571
 GameObject:
@@ -1979,16 +1988,25 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 6
+    nrOfEnemies: 9
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 3
+    nrOfEnemies: 5
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
+      type: 2}
+    nrOfEnemies: 7
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
+      type: 2}
+    nrOfEnemies: 7
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 5
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 3
+    nrOfEnemies: 8
+  - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
+      type: 2}
+    nrOfEnemies: 12
   timeBeforeWave: 30
 --- !u!1 &506175043 stripped
 GameObject:
@@ -3233,16 +3251,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 3
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
     nrOfEnemies: 3
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 3
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 3
+    nrOfEnemies: 5
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
     nrOfEnemies: 3
@@ -3296,10 +3314,10 @@ MonoBehaviour:
     nrOfEnemies: 2
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 4
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 1
+    nrOfEnemies: 2
   timeBeforeWave: 30
 --- !u!1 &852844399
 GameObject:
@@ -6125,7 +6143,7 @@ MonoBehaviour:
     nrOfEnemies: 2
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 3
   timeBeforeWave: 10
 --- !u!1 &1562652035
 GameObject:
@@ -7308,16 +7326,19 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 5
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 7
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 3
+    nrOfEnemies: 10
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
-    nrOfEnemies: 4
+    nrOfEnemies: 10
+  - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
+      type: 2}
+    nrOfEnemies: 6
   timeBeforeWave: 30
 --- !u!1 &1970934688
 GameObject:
@@ -8156,13 +8177,13 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 1
+    nrOfEnemies: 2
   - enemyPrefab: {fileID: 1662554560176006, guid: ea34ea74bc4ec1a4c9c2f19ce92131bf,
       type: 2}
     nrOfEnemies: 3
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
-    nrOfEnemies: 2
+    nrOfEnemies: 3
   - enemyPrefab: {fileID: 1626463938563346, guid: 2e62eeca8a433e6479514c1947c4f037,
       type: 2}
     nrOfEnemies: 3

@@ -11,8 +11,8 @@ public class InfoController : MonoBehaviour {
     public Text coinsText;
     public Text waveText;
 
+    private int nrOfBuildCanvasses = 6;
     private BuildManager[] buildCanvasses;
-
 
     private void Awake()
     { 
@@ -27,6 +27,7 @@ public class InfoController : MonoBehaviour {
 
     private void Start()
     {
+        buildCanvasses = new BuildManager[nrOfBuildCanvasses];
         FindBuildCanvasses();
     }
 
@@ -93,7 +94,8 @@ public class InfoController : MonoBehaviour {
 
     private void FindBuildCanvasses()
     {
-        GameObject[] buildCanvasObjs = GameObject.FindGameObjectsWithTag("BuildManager");
+        GameObject[] buildCanvasObjs = new GameObject[nrOfBuildCanvasses];
+        buildCanvasObjs = GameObject.FindGameObjectsWithTag("BuildManager");
 
         for (int i = 0; i < buildCanvasObjs.Length; i++)
         {
