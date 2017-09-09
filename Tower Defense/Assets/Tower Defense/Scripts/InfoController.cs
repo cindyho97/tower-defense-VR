@@ -20,8 +20,6 @@ public class InfoController : MonoBehaviour {
         
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
-        Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
-        Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
         Messenger.AddListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
     }
 
@@ -35,8 +33,6 @@ public class InfoController : MonoBehaviour {
     {
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
-        Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
-        Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
         Messenger.AddListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
     }
 
@@ -55,7 +51,6 @@ public class InfoController : MonoBehaviour {
                 buildCanvas.UpdateBuildUI();
             }
         }
-        
     }
 
     private void OnWaveUpdated()
@@ -63,34 +58,7 @@ public class InfoController : MonoBehaviour {
         waveText.text = Managers.EnemyMan.nrWaves.ToString();
     }
 
-    private void OnLevelComplete()
-    {
-        StartCoroutine(CompleteLevel());
-    }
-
-    private IEnumerator CompleteLevel()
-    {
-        // TODO: show level complete screen
-        Debug.Log("Level Completed!");
-        yield return new WaitForSeconds(0);
-        // TODO: go to next level
-    }
-
-    private void OnLevelFailed()
-    {
-        StartCoroutine(FailLevel());
-    }
-
-    private IEnumerator FailLevel()
-    {
-        // TODO: show level failed screen
-        Debug.Log("Level Failed!");
-        yield return new WaitForSeconds(0);
-
-        Managers.Player.Respawn();
-        // Manager.Level.RestartLevel
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
 
     private void FindBuildCanvasses()
     {

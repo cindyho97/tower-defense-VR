@@ -23,7 +23,9 @@ public class AudioManager : MonoBehaviour, IGameManager{
     [FMODUnity.EventRef]
     public string towerBuild;
     [FMODUnity.EventRef]
-    public string TEST;
+    public string winMusic;
+    [FMODUnity.EventRef]
+    public string loseMusic;
     
 
     public void Startup()

@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
 	
     public void Startup()
     {
-        UpdateData(20, 20, 400);
+        UpdateData(2, 20, 400);
         status = ManagerStatus.Started;
     }
 

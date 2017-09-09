@@ -23,10 +23,11 @@ MonoBehaviour:
   - {fileID: 114325792489073966}
   - {fileID: 114578966780073458}
   - {fileID: 114617272783563978}
-  - {fileID: 114528790927933828}
+  - {fileID: 114554552795080250}
+  - {fileID: 114341864969344914}
   MasterBankRef: {fileID: 114319320028547530}
   StringsBankRef: {fileID: 114707151779802512}
-  stringsBankWriteTime: 636404971512784224
+  stringsBankWriteTime: 636405658240464728
   cacheVersion: 2
 --- !u!114 &114107046724226894
 MonoBehaviour:
@@ -82,11 +83,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.bank
-  lastModified: 636404971512769477
+  lastModified: 636405658240444801
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 177024
+    Value: 2938304
   Exists: 1
 --- !u!114 &114325792489073966
 MonoBehaviour:
@@ -106,6 +107,27 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114341864969344914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/WinMusic
+  guid: e34aeb8dd8b8314b9d1ba51110dc8d31
+  Banks:
+  - {fileID: 114319320028547530}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
@@ -233,6 +255,27 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114554552795080250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/LoseMusic
+  guid: 6846c6728be9984ebad483a931e980a6
+  Banks:
+  - {fileID: 114319320028547530}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114578966780073458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,11 +331,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636404971512784224
+  lastModified: 636405658240464728
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1050
+    Value: 1084
   Exists: 1
 --- !u!114 &114948042162192172
 MonoBehaviour:
