@@ -94,6 +94,6 @@ public class EndCanvas : MonoBehaviour {
     private void TransportPlayer()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = new Vector3(0, 4, 0);
+        player.transform.position = new Vector3(0, 5, -3);
     }
 }
