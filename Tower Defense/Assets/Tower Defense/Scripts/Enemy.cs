@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
     private int pathNodeIndex = 0;
     private Transform targetPathNode;
     private Animator anim;
+    private Transform player;
     
     protected int health;
 
@@ -16,16 +17,19 @@ public class Enemy : MonoBehaviour {
     public int coinValue;
     public bool isAlive = true;
     public Image healthBarImage;
+    public Transform healthBarCanvas;
 
     private void Start()
     {
         path = GameObject.Find("PathNodes");
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         health = startHealth;
         anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update () {
+        RotateHealthBar();
         if(targetPathNode == null)
         {
             GetNextPathNode();
@@ -115,10 +119,17 @@ public class Enemy : MonoBehaviour {
 
     private void DisableHealthBar()
     {
-        CanvasGroup healthCanvas = healthBarImage.transform.parent.GetComponentInParent<CanvasGroup>();
-        healthCanvas.alpha = 0;
-        healthCanvas.interactable = false;
-        healthCanvas.blocksRaycasts = false;
+        CanvasGroup healthCGroup = healthBarCanvas.GetComponent<CanvasGroup>();
+        healthCGroup.alpha = 0;
+        healthCGroup.interactable = false;
+        healthCGroup.blocksRaycasts = false;
+    }
+
+    private void RotateHealthBar()
+    {
+        Vector3 dir = player.position - healthBarCanvas.position;
+        Quaternion barRot = Quaternion.LookRotation(dir);
+        healthBarCanvas.rotation = barRot;
     }
 
 

@@ -1120,6 +1120,7 @@ MonoBehaviour:
   coinValue: 20
   isAlive: 1
   healthBarImage: {fileID: 114697212655589838}
+  healthBarCanvas: {fileID: 224371630365105006}
 --- !u!114 &114372826286110318
 MonoBehaviour:
   m_ObjectHideFlags: 1
