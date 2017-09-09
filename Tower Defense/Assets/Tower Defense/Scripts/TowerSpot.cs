@@ -27,7 +27,6 @@ public class TowerSpot : MonoBehaviour {
             buildCanvas.playerCoinsText.text = Managers.Player.coins.ToString();
             buildCanvas.SetBuildCanvas(true);
             sfxInstance.start();
-            buildCanvas.UpdateBuildUI();
         }
     }
 }

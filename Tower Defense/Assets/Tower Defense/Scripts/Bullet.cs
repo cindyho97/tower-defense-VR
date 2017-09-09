@@ -50,9 +50,6 @@ public class Bullet : MonoBehaviour {
         GameObject explosion = Instantiate(explosionPrefab, target.position, target.rotation) as GameObject;
         explosion.GetComponent<BulletExplosion>().DestroyExplosion();
 
-        
-        
-
         if (radius == 0)
         {
             if(gameObject.name.Contains("MagicBall"))
@@ -63,7 +60,6 @@ public class Bullet : MonoBehaviour {
             }
             else if (gameObject.name.Contains("Arrow"))
             {
-                
                 sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.arrowDamage);
                 sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
                 sfxInstance.start();
@@ -99,10 +95,5 @@ public class Bullet : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-    }
-
-    private void OnDestroy()
-    {
-        sfxInstance.release();
     }
 }

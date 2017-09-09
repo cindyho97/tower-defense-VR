@@ -23,7 +23,7 @@ public class EndCanvas : MonoBehaviour {
         Messenger.RemoveListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
     }
 
-    public void OnLevelComplete()
+    private void OnLevelComplete()
     {
         sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.winMusic);
         sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
@@ -33,7 +33,7 @@ public class EndCanvas : MonoBehaviour {
         SetEndCanvas(true);
     }
 
-    public void OnLevelFailed()
+    private void OnLevelFailed()
     {
         sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.loseMusic);
         sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));

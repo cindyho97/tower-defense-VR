@@ -75,7 +75,6 @@ public class Enemy : MonoBehaviour {
     private void ReachedGoal()
     {
         // Enemy arrives at castle
-        Debug.Log("Reached Goal!");
         Managers.Player.UpdateHealth(-2);
         Managers.EnemyMan.enemyCount--;
         Destroy(gameObject);
@@ -91,9 +90,8 @@ public class Enemy : MonoBehaviour {
         if(health <= 0)
         {
             isAlive = false;
-            
-            StartCoroutine(Die());
 
+            StartCoroutine(Die());
         }
     }
 

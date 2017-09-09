@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviour,IGameManager {
         status = ManagerStatus.Started;
     }
 
-    public void UpdateData(int health, int maxHealth, int coins)
+    private void UpdateData(int health, int maxHealth, int coins)
     {
         this.health = health;
         this.maxHealth = maxHealth;
@@ -48,7 +48,6 @@ public class PlayerManager : MonoBehaviour,IGameManager {
         {
             coins = 0;
         }
-
         Messenger.Broadcast(GameEvent.COINS_UPDATED);
     }
 

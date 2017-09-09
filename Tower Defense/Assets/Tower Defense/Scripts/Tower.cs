@@ -117,13 +117,11 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
         if(buildCanvasGroup.alpha == 1) // buildCanvas is already active
         {
             buildCanvas.SetBuildCanvas(false);
-            buildCanvas.UpdateBuildUI();
         }
         else
         {
             buildCanvas.playerCoinsText.text = Managers.Player.coins.ToString();
             buildCanvas.SetBuildCanvas(true);
-            buildCanvas.UpdateBuildUI();
         }
     }
 

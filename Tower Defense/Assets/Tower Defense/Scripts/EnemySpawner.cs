@@ -83,7 +83,6 @@ public class EnemySpawner : MonoBehaviour {
 
     private void GetNextWave()
     {
-        
         if (enemySpawned == false)
         {
             soundPlayed = false;
@@ -101,9 +100,5 @@ public class EnemySpawner : MonoBehaviour {
 
             Destroy(gameObject);
         }
-    }
-    private void OnDestroy()
-    {
-        sfxInstance.release();
     }
 }

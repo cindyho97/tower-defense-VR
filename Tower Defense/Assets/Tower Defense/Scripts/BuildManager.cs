@@ -43,6 +43,16 @@ public class BuildManager : MonoBehaviour {
 
     FMOD.Studio.EventInstance sfxInstance;
 
+    private void Awake()
+    {
+        Messenger.AddListener(GameEvent.COINS_UPDATED, UpdateBuildUI);
+    }
+
+    private void OnDestroy()
+    {
+        Messenger.AddListener(GameEvent.COINS_UPDATED, UpdateBuildUI);
+    }
+
     private void Start()
     {
         arrowCost = arrowPrefab.GetComponent<Tower>().cost;
@@ -60,7 +70,7 @@ public class BuildManager : MonoBehaviour {
 
 
     // Give existing towers a special color
-    public void ChangeTowerBuildColor()
+    private void ChangeTowerBuildColor()
     {
         if(previousTower == arrowPrefab)
         {
@@ -82,7 +92,7 @@ public class BuildManager : MonoBehaviour {
     }
 
 
-    public void ChangeEnableColor()
+    private void ChangeEnableColor()
     {
         arrowButton.enabled = (Managers.Player.coins >= arrowCost) ? true : false;
         magicButton.enabled = (Managers.Player.coins >= magicCost) ? true : false;
