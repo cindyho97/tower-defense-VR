@@ -67,6 +67,7 @@ public class EndCanvas : MonoBehaviour {
             endCanvas.alpha = 1;
             endCanvas.interactable = true;
             endCanvas.blocksRaycasts = true;
+            Managers.AudioMan.sfxInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             PauseGame(true);
             TransportPlayer();
         }

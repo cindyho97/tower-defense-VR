@@ -505,6 +505,7 @@ MonoBehaviour:
   towerBuild: event:/TowerBuild
   winMusic: event:/WinMusic
   loseMusic: event:/LoseMusic
+  bgMusic: event:/BgMusic
 --- !u!1 &121667332
 GameObject:
   m_ObjectHideFlags: 0

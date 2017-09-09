@@ -26,10 +26,25 @@ public class AudioManager : MonoBehaviour, IGameManager{
     public string winMusic;
     [FMODUnity.EventRef]
     public string loseMusic;
-    
+    [FMODUnity.EventRef]
+    public string bgMusic;
+
+    public FMOD.Studio.EventInstance sfxInstance;
 
     public void Startup()
     {
         status = ManagerStatus.Started;
+    }
+
+    private void Start()
+    {
+        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.bgMusic);
+        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        sfxInstance.start();
+    }
+
+    private void OnDestroy()
+    {
+        sfxInstance.release();
     }
 }
