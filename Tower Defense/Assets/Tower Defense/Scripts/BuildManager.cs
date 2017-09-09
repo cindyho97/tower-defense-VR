@@ -11,9 +11,9 @@ public class BuildManager : MonoBehaviour {
     public GameObject magicPrefab;
     public GameObject canonPrefab;
 
-    public Image arrowImage;
-    public Image magicImage;
-    public Image canonImage;
+    public Button arrowButton;
+    public Button magicButton;
+    public Button canonButton;
 
     public Text playerCoinsText;
     public Text arrowCostText;
@@ -64,15 +64,15 @@ public class BuildManager : MonoBehaviour {
     {
         if(previousTower == arrowPrefab)
         {
-            currentImage = arrowImage;
+            currentImage = arrowButton.image;
         }
         else if(previousTower == magicPrefab)
         {
-            currentImage = magicImage;
+            currentImage = magicButton.image;
         }
         else if(previousTower == canonPrefab)
         {
-            currentImage = canonImage;
+            currentImage = canonButton.image;
         }
         else if(previousTower == null)
         {
@@ -84,9 +84,12 @@ public class BuildManager : MonoBehaviour {
 
     public void ChangeEnableColor()
     {
-        arrowImage.color = (Managers.Player.coins >= arrowCost) ? white : gray;
-        magicImage.color = (Managers.Player.coins >= magicCost) ? white : gray;
-        canonImage.color = (Managers.Player.coins >= canonCost) ? white : gray;
+        arrowButton.enabled = (Managers.Player.coins >= arrowCost) ? true : false;
+        magicButton.enabled = (Managers.Player.coins >= magicCost) ? true : false;
+        canonButton.enabled = (Managers.Player.coins >= canonCost) ? true : false;
+        arrowButton.image.color = (Managers.Player.coins >= arrowCost) ? white : gray;
+        magicButton.image.color = (Managers.Player.coins >= magicCost) ? white : gray;
+        canonButton.image.color = (Managers.Player.coins >= canonCost) ? white : gray;
         arrowCostText.color = (Managers.Player.coins >= arrowCost) ? yellow : gray;
         magicCostText.color = (Managers.Player.coins >= magicCost) ? yellow : gray;
         canonCostText.color = (Managers.Player.coins >= canonCost) ? yellow : gray;
