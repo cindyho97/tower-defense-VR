@@ -10,11 +10,19 @@ public class EndCanvas : MonoBehaviour {
     private CanvasGroup endCanvas;
     FMOD.Studio.EventInstance sfxInstance;
 
+    private Light[] lights = new Light[4];
+
     private void Awake()
     {
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
         Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
         endCanvas = GetComponent<CanvasGroup>();
+        GameObject[] lightObjs = GameObject.FindGameObjectsWithTag("AllSidesLight");
+        
+        for (int i = 0; i < lightObjs.Length; i++)
+        {
+            lights[i] = lightObjs[i].GetComponent<Light>();
+        }
     }
 
     private void OnDestroy()
@@ -23,7 +31,7 @@ public class EndCanvas : MonoBehaviour {
         Messenger.RemoveListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
     }
 
-    private void OnLevelComplete()
+    public void OnLevelComplete()
     {
         sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.winMusic);
         sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
@@ -33,8 +41,10 @@ public class EndCanvas : MonoBehaviour {
         SetEndCanvas(true);
     }
 
-    private void OnLevelFailed()
+    public void OnLevelFailed()
     {
+        StartCoroutine(DimLights());
+
         sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.loseMusic);
         sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         sfxInstance.start();
@@ -49,6 +59,7 @@ public class EndCanvas : MonoBehaviour {
         sfxInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         SetEndCanvas(false);
         PauseGame(false);
+
         Managers.Player.Respawn();
         sfxInstance.release();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -68,8 +79,8 @@ public class EndCanvas : MonoBehaviour {
             endCanvas.interactable = true;
             endCanvas.blocksRaycasts = true;
             Managers.AudioMan.sfxInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            PauseGame(true);
             TransportPlayer();
+            PauseGame(true);
         }
         else
         {
@@ -95,5 +106,25 @@ public class EndCanvas : MonoBehaviour {
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(0, 5, -3);
+    }
+
+    private IEnumerator DimLights()
+    {
+        float elapsed = 0f;
+        float duration = 5f;
+        float minInt = 0.25f;
+        float maxInt = 0.7f;
+        float lightValue;
+
+        while (elapsed < duration)
+        {
+            lightValue = Mathf.Lerp(maxInt, minInt, elapsed / duration);
+            foreach(Light light in lights)
+            {
+                light.intensity = lightValue;
+            }
+            elapsed += .025f; // Don't use Time.deltaTime --> Time.timescale = 0
+            yield return null;
+        }
     }
 }
