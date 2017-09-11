@@ -26,10 +26,32 @@ MonoBehaviour:
   - {fileID: 114554552795080250}
   - {fileID: 114341864969344914}
   - {fileID: 114803542037105520}
+  - {fileID: 114063117266406546}
   MasterBankRef: {fileID: 114319320028547530}
   StringsBankRef: {fileID: 114707151779802512}
-  stringsBankWriteTime: 636405728783353108
+  stringsBankWriteTime: 636407425663583883
   cacheVersion: 2
+--- !u!114 &114063117266406546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Firework
+  guid: f47133599e053b4a8f375eab1cdfcd56
+  Banks:
+  - {fileID: 114319320028547530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114107046724226894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,11 +106,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.bank
-  lastModified: 636405728783292754
+  lastModified: 636407425663548841
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3979168
+    Value: 4010912
   Exists: 1
 --- !u!114 &114325792489073966
 MonoBehaviour:
@@ -352,11 +374,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636405728783353108
+  lastModified: 636407425663583883
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1132
+    Value: 1172
   Exists: 1
 --- !u!114 &114803542037105520
 MonoBehaviour:

@@ -308,7 +308,7 @@ Transform:
   - {fileID: 768250402}
   - {fileID: 734814068}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &57933279 stripped
 Transform:
@@ -676,6 +676,7 @@ MonoBehaviour:
   winMusic: event:/WinMusic
   loseMusic: event:/LoseMusic
   bgMusic: event:/BgMusic
+  firework: event:/Firework
 --- !u!1 &121667332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &201887645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15324,9 +15325,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1114445563}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.520897, y: 0.99916744, z: 6.9184513}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5066.984, y: -1333.6108, z: 1021.0657}
+  m_LocalScale: {x: 333.33334, y: 333.33334, z: 434.7826}
   m_Children:
   - {fileID: 2144299908}
   - {fileID: 1438610690}
@@ -15336,8 +15337,8 @@ Transform:
   - {fileID: 1060044962}
   - {fileID: 1354312379}
   - {fileID: 2087986193}
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 1231367845}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1154741239
 Prefab:
@@ -15939,6 +15940,7 @@ RectTransform:
   m_LocalScale: {x: 0.003, y: 0.003, z: 0.0023}
   m_Children:
   - {fileID: 1168815408}
+  - {fileID: 1114445564}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16290,7 +16292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1308326939
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -28,6 +28,8 @@ public class AudioManager : MonoBehaviour, IGameManager{
     public string loseMusic;
     [FMODUnity.EventRef]
     public string bgMusic;
+    [FMODUnity.EventRef]
+    public string firework;
 
     public FMOD.Studio.EventInstance sfxInstance;
 

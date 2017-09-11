@@ -9,7 +9,7 @@ public class EndCanvas : MonoBehaviour {
     public Text endText;
     public Transform fireworkParent;
     private CanvasGroup endCanvas;
-    FMOD.Studio.EventInstance sfxInstance;
+    FMOD.Studio.EventInstance endMusic;
 
     private Light[] lights = new Light[4];
 
@@ -35,9 +35,9 @@ public class EndCanvas : MonoBehaviour {
     public void OnLevelComplete()
     {
         
-        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.winMusic);
-        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-        sfxInstance.start();
+        endMusic = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.winMusic);
+        endMusic.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        endMusic.start();
 
         endText.text = "Congratulations!\nYou won!";
         SetEndCanvas(true);
@@ -48,9 +48,9 @@ public class EndCanvas : MonoBehaviour {
     {
         StartCoroutine(DimLights());
 
-        sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.loseMusic);
-        sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-        sfxInstance.start();
+        endMusic = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.loseMusic);
+        endMusic.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        endMusic.start();
 
         endText.text = "Awwww you lost :(\nBetter next time!";
         SetEndCanvas(true);
@@ -59,18 +59,18 @@ public class EndCanvas : MonoBehaviour {
 
     public void OnRestartButton()
     {
-        sfxInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        endMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         SetEndCanvas(false);
         PauseGame(false);
 
         Managers.Player.Respawn();
-        sfxInstance.release();
+        endMusic.release();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnQuitButton()
     {
-        sfxInstance.release();
+        endMusic.release();
         Application.Quit();
     }
 
