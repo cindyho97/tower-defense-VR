@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndCanvas : MonoBehaviour {
 
     public Text endText;
+    public Transform fireworkParent;
     private CanvasGroup endCanvas;
     FMOD.Studio.EventInstance sfxInstance;
 
@@ -33,12 +34,14 @@ public class EndCanvas : MonoBehaviour {
 
     public void OnLevelComplete()
     {
+        
         sfxInstance = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.winMusic);
         sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         sfxInstance.start();
 
         endText.text = "Congratulations!\nYou won!";
         SetEndCanvas(true);
+        StartCoroutine(StartFireworks());
     }
 
     public void OnLevelFailed()
@@ -92,14 +95,7 @@ public class EndCanvas : MonoBehaviour {
 
     private void PauseGame(bool isPaused)
     {
-        if (isPaused)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        Time.timeScale = (isPaused) ? 0 : 1;
     }
 
     private void TransportPlayer()
@@ -126,5 +122,14 @@ public class EndCanvas : MonoBehaviour {
             elapsed += .025f; // Don't use Time.deltaTime --> Time.timescale = 0
             yield return null;
         }
+    }
+
+    private IEnumerator StartFireworks()
+    {
+        for(int i = 0; i < fireworkParent.childCount; i++)
+        {
+            fireworkParent.GetChild(i).gameObject.SetActive(true);
+        }
+        yield return null;
     }
 }

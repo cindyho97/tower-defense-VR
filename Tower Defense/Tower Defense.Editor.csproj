@@ -177,6 +177,7 @@
     <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
     <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
     <None Include="Assets\Tower Defense\Materials\Outline.shader" />
+    <None Include="Assets\Tower Defense\ParticleSystems\Firework\Materials\UnlitVertexColour_Alpha.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

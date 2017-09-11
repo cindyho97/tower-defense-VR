@@ -231,6 +231,7 @@
     <Compile Include="Assets\Tower Defense\Scripts\SpawnSphere.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\Tower.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\TowerSpot.cs" />
+    <Compile Include="Assets\Tower Defense\Scripts\UnscaledTimeParticle.cs" />
     <Compile Include="Assets\Tower Defense\Scripts\WatchTower.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +253,7 @@
     <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
     <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
     <None Include="Assets\Tower Defense\Materials\Outline.shader" />
+    <None Include="Assets\Tower Defense\ParticleSystems\Firework\Materials\UnlitVertexColour_Alpha.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
