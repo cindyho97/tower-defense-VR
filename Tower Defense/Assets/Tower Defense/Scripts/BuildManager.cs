@@ -22,6 +22,7 @@ public class BuildManager : MonoBehaviour {
 
     public GameObject buildTimeCanvas;
     public Image buildTimeBar;
+    public GameObject halfTowerSpot;
     
     public bool towerBuild = false;
     private int arrowCost;
@@ -40,6 +41,7 @@ public class BuildManager : MonoBehaviour {
     private bool buildingNow = false;
     private float buildTimeRemaining;
     private int buildStartTime = 3;
+    private GameObject halfTowerSpotInst;
 
     FMOD.Studio.EventInstance sfxInstance;
 
@@ -170,6 +172,7 @@ public class BuildManager : MonoBehaviour {
         sfxInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         sfxInstance.start();
 
+        InstantiateHalfTowerSpot();
         buildTimeCanvas.SetActive(true);
         buildingNow = true;
 
@@ -182,6 +185,7 @@ public class BuildManager : MonoBehaviour {
         }
 
         buildTimeRemaining = buildStartTime;
+        Destroy(halfTowerSpotInst);
         InstantiateTower();
         buildTimeCanvas.SetActive(false);
     }
@@ -191,6 +195,11 @@ public class BuildManager : MonoBehaviour {
         Instantiate(selectedTower, buildSignPosition, buildSignRotation, transform.parent);
         previousTower = selectedTower;
         SetBuildCanvas(false);
+    }
+
+    private void InstantiateHalfTowerSpot()
+    {
+        halfTowerSpotInst = Instantiate(halfTowerSpot, buildSignPosition, buildSignRotation,transform.parent);
     }
 
     public void SetBuildCanvas(bool enableCanvas)

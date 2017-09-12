@@ -1254,6 +1254,8 @@ MonoBehaviour:
   canonCostText: {fileID: 114333918525977800}
   buildTimeCanvas: {fileID: 1173069897306458}
   buildTimeBar: {fileID: 114250416186796846}
+  halfTowerSpot: {fileID: 1070522754281836, guid: f2b0395307756604db864013d64484aa,
+    type: 2}
   towerBuild: 0
 --- !u!114 &114734061978512876
 MonoBehaviour:
