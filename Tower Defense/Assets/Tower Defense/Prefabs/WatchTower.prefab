@@ -149,4 +149,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54156c620dfd9924bafaf85795a743fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportSound: event:/Teleport
