@@ -101,7 +101,7 @@ public class EndCanvas : MonoBehaviour {
     private void TransportPlayer()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = new Vector3(0, 5, -3);
+        player.transform.position = new Vector3(0, 5, -6);
     }
 
     private IEnumerator DimLights()
