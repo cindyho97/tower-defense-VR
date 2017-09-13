@@ -33,8 +33,7 @@ public class EndCanvas : MonoBehaviour {
     }
 
     public void OnLevelComplete()
-    {
-        
+    { 
         endMusic = FMODUnity.RuntimeManager.CreateInstance(Managers.AudioMan.winMusic);
         endMusic.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         endMusic.start();

@@ -80,7 +80,6 @@ public class Enemy : MonoBehaviour {
     {
         // Enemy arrives at castle
         Managers.Player.UpdateHealth(-2);
-        Managers.EnemyMan.enemyCount--;
         Destroy(gameObject);
     }
 
@@ -112,7 +111,6 @@ public class Enemy : MonoBehaviour {
         anim.SetBool("Die", true);
         
         Managers.Player.UpdateCoins(coinValue);
-        Managers.EnemyMan.enemyCount--;
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }

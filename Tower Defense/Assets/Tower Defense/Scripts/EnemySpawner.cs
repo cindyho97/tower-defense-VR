@@ -75,7 +75,6 @@ public class EnemySpawner : MonoBehaviour {
                 waveComp.spawned++;
                 Instantiate(waveComp.enemyPrefab, transform.parent.position, transform.rotation);
                 enemySpawned = true;
-                Managers.EnemyMan.enemyCount++;
                 break;
             }
         }

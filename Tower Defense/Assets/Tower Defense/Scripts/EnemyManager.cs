@@ -9,23 +9,28 @@ public class EnemyManager : MonoBehaviour, IGameManager {
     public int nrWaves { get; private set; }
     public int enemyCount;
     public bool wavesCompleted;
+    private int lastEnemyCount;
+    private bool levelCompleted = false;
 
 
     public void Startup()
     {
-        UpdateData(0, 0);
+        UpdateData(0);
 
         status = ManagerStatus.Started;
     }
 
     private void Update()
     {
-        CheckNrOfEnemies();
+        if (wavesCompleted)
+        {
+            CheckNrOfEnemies();
+        }
+        
     }
 
-    void UpdateData(int enemyCount, int nrWaves)
+    void UpdateData( int nrWaves)
     {
-        this.enemyCount = enemyCount;
         this.nrWaves = nrWaves;
     }
 
@@ -37,8 +42,11 @@ public class EnemyManager : MonoBehaviour, IGameManager {
 
     public void CheckNrOfEnemies()
     {
-        if (wavesCompleted && enemyCount == 0)
+        lastEnemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
+
+        if(lastEnemyCount <= 0 && levelCompleted == false)
         {
+            levelCompleted = true;
             Messenger.Broadcast(GameEvent.LEVEL_COMPLETE);
         }
     }
