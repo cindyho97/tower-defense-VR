@@ -52,7 +52,7 @@ public class BuildManager : MonoBehaviour {
 
     private void OnDestroy()
     {
-        Messenger.AddListener(GameEvent.COINS_UPDATED, UpdateBuildUI);
+        Messenger.RemoveListener(GameEvent.COINS_UPDATED, UpdateBuildUI);
     }
 
     private void Start()
@@ -225,6 +225,7 @@ public class BuildManager : MonoBehaviour {
         ChangeEnableColor();
         ChangeTowerBuildColor();
     }
+
 
     
 

@@ -22,9 +22,9 @@ public class InfoController : MonoBehaviour {
 
     private void OnDestroy()
     {
-        Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
-        Messenger.AddListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
-        Messenger.AddListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
+        Messenger.RemoveListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
+        Messenger.RemoveListener(GameEvent.COINS_UPDATED, OnCoinsUpdated);
+        Messenger.RemoveListener(GameEvent.WAVE_UPDATED, OnWaveUpdated);
     }
 
     private void OnHealthUpdated()

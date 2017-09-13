@@ -124,9 +124,4 @@ public class Tower : MonoBehaviour, IPointerClickHandler {
             buildCanvas.SetBuildCanvas(true);
         }
     }
-
-    private void OnDestroy()
-    {
-        sfxInstance.release();
-    }
 }

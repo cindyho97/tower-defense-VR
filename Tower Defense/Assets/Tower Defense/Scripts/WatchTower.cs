@@ -58,5 +58,4 @@ public class WatchTower : MonoBehaviour, IPointerClickHandler {
             groundSymbol.SetActive(false);
         }
     }
-
 }
