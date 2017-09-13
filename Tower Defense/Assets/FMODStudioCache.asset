@@ -29,7 +29,7 @@ MonoBehaviour:
   - {fileID: 114063117266406546}
   MasterBankRef: {fileID: 114319320028547530}
   StringsBankRef: {fileID: 114707151779802512}
-  stringsBankWriteTime: 636407425663583883
+  stringsBankWriteTime: 636409134789731716
   cacheVersion: 2
 --- !u!114 &114063117266406546
 MonoBehaviour:
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.bank
-  lastModified: 636407425663548841
+  lastModified: 636409134789682033
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Cindy Ho\Documents\Tower Defense Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636407425663583883
+  lastModified: 636409134789731716
   LoadResult: 0
   FileSizes:
   - Name: Desktop
