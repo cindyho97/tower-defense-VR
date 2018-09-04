@@ -3,7 +3,7 @@
 
 <p>A small project with Google Cardboard SDK in Unity.<br>
 Almost every asset(except some Particle Systems) is made by myself using Blender and Photoshop.<br>
-I made this game during my summer holiday and while making this game, I learned to work with Unity in a 3D environement.<br>
+I made this game during my summer holiday and while making this game, I learned to work with Unity in a 3D environment.<br>
 This game is highly inspired by a VR game called Castle Must Be Mine.</p>
 <br>
 <p>Youtube link: https://www.youtube.com/watch?feature=player_embedded&v=M54neLiSFv0</p>
